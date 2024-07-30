@@ -37,6 +37,9 @@
     <Compile Update="Signup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="StaffSchedule.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ViewAppointment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -79,6 +82,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Signup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StaffSchedule.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ViewAppointment.xaml">

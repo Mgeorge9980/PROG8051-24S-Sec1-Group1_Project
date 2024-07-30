@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\
-Studio_Management
+C:\Users\shilp\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\
+StudioManagement
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\shilp\source\repos\Studio Management\App.xaml
-121988260190
+C:\Users\shilp\source\repos\PROG8051-24S-Sec1-Group1_Project\App.xaml
+14-1715689174
 
-15570680122
+171713277583
 198155382431
-AddStaff.xaml;ADMINdashboard.xaml;forgotpassword.xaml;login.xaml;Logout.xaml;MainWindow.xaml;MyCustomer.xaml;OrderListView.xaml;ProceedFP.xaml;Signup.xaml;View Staff.xaml;ViewAppointment.xaml;
+AddServiceAdmin.xaml;AddStaff.xaml;ADMINdashboard.xaml;forgotpassword.xaml;login.xaml;Logout.xaml;MainWindow.xaml;MyCustomer.xaml;OrderListView.xaml;ProceedFP.xaml;ServiceAdmin.xaml;Signup.xaml;View Staff.xaml;ViewAppointment.xaml;
 
 False
 
