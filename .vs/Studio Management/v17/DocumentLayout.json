@@ -1,12 +1,102 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\addstaff.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:addstaff.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\addstaff.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:addstaff.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\view staff.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:view staff.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\staffschedule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:staffschedule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\staffschedule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:staffschedule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddStaff.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\AddStaff.xaml.cs",
+              "RelativeDocumentMoniker": "AddStaff.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\AddStaff.xaml.cs",
+              "RelativeToolTip": "AddStaff.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T19:24:20.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddStaff.xaml",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\AddStaff.xaml",
+              "RelativeDocumentMoniker": "AddStaff.xaml",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\AddStaff.xaml",
+              "RelativeToolTip": "AddStaff.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-30T19:24:13.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StaffSchedule.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\StaffSchedule.xaml.cs",
+              "RelativeDocumentMoniker": "StaffSchedule.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\StaffSchedule.xaml.cs",
+              "RelativeToolTip": "StaffSchedule.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T19:19:46.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StaffSchedule.xaml",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\StaffSchedule.xaml",
+              "RelativeDocumentMoniker": "StaffSchedule.xaml",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\StaffSchedule.xaml",
+              "RelativeToolTip": "StaffSchedule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-30T17:55:54.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "View Staff.xaml",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\View Staff.xaml",
+              "RelativeDocumentMoniker": "View Staff.xaml",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\View Staff.xaml",
+              "RelativeToolTip": "View Staff.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-30T17:54:44.176Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

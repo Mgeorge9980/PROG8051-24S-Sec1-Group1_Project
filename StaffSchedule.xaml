@@ -31,16 +31,23 @@
             <ComboBoxItem Content="Wednesday"/>
             <ComboBoxItem Content="Thursday"/>
             <ComboBoxItem Content="Friday"/>
-            <ComboBoxItem Content="Saturday"/>
-            <ComboBoxItem Content="Sunday"/>
         </ComboBox>
 
-        <!-- Set Button -->
-        <Button Content="SET" HorizontalAlignment="Left" VerticalAlignment="Top" 
+        <!-- Update Button -->
+        <Button Content="UPDATE" HorizontalAlignment="Left" VerticalAlignment="Top" 
                 Width="70" Margin="150,220,0,0" Background="#0097A7" 
                 Foreground="White" FontFamily="Arial" FontSize="14" 
                 FontWeight="Bold" Cursor="Hand"
                 Click="SetButton_Click"/>
+
+        <!-- Schedule DataGrid -->
+        <DataGrid x:Name="scheduleDataGrid" AutoGenerateColumns="False" 
+                  Margin="400,100,20,0" VerticalAlignment="Top" Height="200">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Day" Binding="{Binding Day}" Width="*"/>
+                <DataGridTextColumn Header="Staff" Binding="{Binding Staff}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
         <!-- Action Buttons -->
         <Button Content="_" Width="30" HorizontalAlignment="Right" VerticalAlignment="Top" 

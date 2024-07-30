@@ -68,7 +68,7 @@ namespace LoginApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/StudioManagement;component/view%20staff.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/StudioManagement;V1.0.0.0;component/view%20staff.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\View Staff.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
