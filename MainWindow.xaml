@@ -1,0 +1,51 @@
+﻿<Window x:Class="StudioManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lens Studio" Height="450" Width="800">
+    <Grid Background="#2F465B">
+        <!-- Define rows and columns -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="219"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Top Left Title -->
+        <TextBlock Text="Lens Studio" Foreground="White" FontSize="36" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Height="48" Width="196"/>
+
+        <!-- Top Right Title -->
+        <TextBlock Text="Frame Your World With Us?" Foreground="White" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Grid.Column="1" Height="32" Width="290"/>
+
+        <!-- Left side menu -->
+        <StackPanel Background="#333333" Grid.Row="1" Grid.Column="0">
+            <Button Content="Home" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontSize="16" HorizontalContentAlignment="Left" Padding="10"/>
+            <Button Content="My Profile" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontSize="16" HorizontalContentAlignment="Left" Padding="10"/>
+            <Button Content="Appointments" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontSize="16" HorizontalContentAlignment="Left" Padding="10"/>
+            <Button Content="Orders" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontSize="16" HorizontalContentAlignment="Left" Padding="10"/>
+            <Button Content="Services" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontSize="16" HorizontalContentAlignment="Left" Padding="10"/>
+            <Button Content="Feedback" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontSize="16" HorizontalContentAlignment="Left" Padding="10"/>
+            <Button Content="FAQs" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontSize="16" HorizontalContentAlignment="Left" Padding="10"/>
+            <Button Content="Contact Us" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontSize="16" HorizontalContentAlignment="Left" Padding="10"/>
+            <Button Content="Logout" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontSize="16" HorizontalContentAlignment="Left" Padding="10"/>
+        </StackPanel>
+
+        <!-- Main content area -->
+        <StackPanel Grid.Row="1" Grid.Column="1" Background="White" Margin="10,10,10,10">
+            <TextBlock Text="About Us" FontSize="20" FontWeight="Bold" Foreground="Black" Margin="0,0,0,10"/>
+            <TextBlock Text="Welcome to Lens Studio, where we frame your world with our unique lens solutions. Our mission is to provide high-quality lenses and exceptional customer service." TextWrapping="Wrap" Foreground="Black" Margin="0,0,0,20"/>
+
+            <TextBlock Text="Recent Photos" FontSize="20" FontWeight="Bold" Foreground="Black" Margin="0,0,0,10"/>
+            <!-- Placeholder for photos -->
+            <WrapPanel>
+                <!-- Add Image elements or other controls to display photos -->
+                <Rectangle Width="100" Height="100" Fill="Gray" Margin="5"/>
+                <Rectangle Width="100" Height="100" Fill="Gray" Margin="5"/>
+                <Rectangle Width="100" Height="100" Fill="Gray" Margin="5"/>
+                <Rectangle Width="100" Height="100" Fill="Gray" Margin="5"/>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Window>

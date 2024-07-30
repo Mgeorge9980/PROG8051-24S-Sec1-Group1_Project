@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddServiceAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddStaff.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ADMINdashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="forgotpassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Logout.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OrderListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProceedFP.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ServiceAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Signup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewAppointment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View Staff.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MyCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddServiceAdmin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddStaff.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ADMINdashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="forgotpassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Logout.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OrderListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProceedFP.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ServiceAdmin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Signup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewAppointment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View Staff.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MyCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

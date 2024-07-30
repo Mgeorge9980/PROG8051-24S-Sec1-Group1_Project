@@ -1,0 +1,29 @@
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\add staff.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\ADMINdashboard.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\forgotpassword.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\login.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\Logout.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\OrderListView.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\ProceedFP.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\Signup.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\View Appoinmnet.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\View Staff.baml
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\add staff.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\ADMINdashboard.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\forgotpassword.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\login.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\Logout.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\OrderListView.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\ProceedFP.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\Signup.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\View Appoinmnet.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\View Staff.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\Studio Management_MarkupCompile.cache
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\Studio Management.g.resources
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\Studio Management.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\Studio Management.AssemblyInfoInputs.cache
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\Studio Management.AssemblyInfo.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\Studio Management.csproj.CoreCompileInputs.cache

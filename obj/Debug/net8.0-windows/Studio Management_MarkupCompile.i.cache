@@ -1,0 +1,20 @@
+﻿Studio Management
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\shilp\source\repos\Studio Management\obj\Debug\net8.0-windows\
+Studio_Management
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+C:\Users\shilp\source\repos\Studio Management\App.xaml
+111761994446
+
+16910102989
+198155382431
+add staff.xaml;ADMINdashboard.xaml;forgotpassword.xaml;login.xaml;Logout.xaml;MainWindow.xaml;OrderListView.xaml;ProceedFP.xaml;Signup.xaml;View Appoinmnet.xaml;View Staff.xaml;
+
+False
+
