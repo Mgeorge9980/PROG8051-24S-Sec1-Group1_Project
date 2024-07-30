@@ -30,7 +30,11 @@ namespace StudioManagement
                             myCustomerWindow.Show();
                             this.Close();
                             break;
-                            
+                        case "Logout":
+                            var logoutWindow = new LogoutWindow();
+                            logoutWindow.Show();
+                            this.Close();
+                            break;
                     }
                 }
             }

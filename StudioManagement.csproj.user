@@ -16,6 +16,9 @@
     <Compile Update="ADMINdashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="FeedbackAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="forgotpassword.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
     <Compile Update="StaffSchedule.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserDashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ViewAppointment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -58,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ADMINdashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FeedbackAdmin.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="forgotpassword.xaml">
@@ -85,6 +94,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="StaffSchedule.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserDashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ViewAppointment.xaml">
