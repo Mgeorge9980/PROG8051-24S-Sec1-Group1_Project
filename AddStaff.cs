@@ -26,6 +26,7 @@ namespace StudioManagement
 
             // Implement the logic to save the staff details here
             // For demonstration, we'll just show a message box with the details
+
             MessageBox.Show($"Staff Added:\n\nName: {staffName}\nMobile Number: {mobileNumber}",
                             "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 

@@ -164,3 +164,5 @@ C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-wi
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewStaffDetails.baml
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewStaffDetails.g.cs
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioMa.61C877BD.Up2Date
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\BookAppoinment.baml
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\BookAppoinment.g.cs
