@@ -1,0 +1,19 @@
+﻿<Window x:Class="StudioManagement.ContactUsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Contact Us" Height="450" Width="800">
+    <Grid Background="#2F465B">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="LENSE STUDIO" FontSize="28" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="10"/>
+            <TextBlock Text="EAST WATERLOO" FontSize="20" Foreground="White" HorizontalAlignment="Center" Margin="5"/>
+            <TextBlock Text="NEAR CONESTOGA COLLEGE" FontSize="20" Foreground="White" HorizontalAlignment="Center" Margin="5"/>
+            <TextBlock Text="CONTACT: +1 437-9898-4242" FontSize="20" Foreground="White" HorizontalAlignment="Center" Margin="5"/>
+
+
+            <Button Content="View Map" Width="200" Height="40" Margin="20"
+                    Background="#1899D6" Foreground="White" FontSize="16"
+                    Cursor="Hand" BorderBrush="Transparent" BorderThickness="0"
+                    Click="ViewMapButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
