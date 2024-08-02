@@ -1,5 +1,4 @@
-﻿using StudioManagement;
-using System.Windows;
+﻿using System.Windows;
 
 namespace StudioManagement
 {

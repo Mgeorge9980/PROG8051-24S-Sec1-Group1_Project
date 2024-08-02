@@ -1,32 +1,61 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace StudioManagement
 {
     public partial class ViewAppointmentWindow : Window
     {
-        public ObservableCollection<Appointment> Appointments { get; set; }
-        public ObservableCollection<Appointment> FilteredAppointments { get; set; }
+        public List<Appointment> Appointments { get; set; }
+        public List<Appointment> FilteredAppointments { get; set; }
 
         public ViewAppointmentWindow()
         {
             InitializeComponent();
             LoadAppointments();
-            FilteredAppointments = new ObservableCollection<Appointment>(Appointments);
+            FilteredAppointments = new List<Appointment>(Appointments);
             AppointmentsDataGrid.ItemsSource = FilteredAppointments;
         }
 
         private void LoadAppointments()
         {
             // Example data; in a real application, you would load this from a database or other data source
-            Appointments = new ObservableCollection<Appointment>
+
+
+
+            List<Appointment> appmnts = new List<Appointment>();
+
+            using (SqlConnection connection = new SqlConnection("Server=MERLIN\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
             {
-                new Appointment { Number = 1, Name = "John Doe", PhoneNumber = "1234567890", AppointmentType = "Consultation", Date = "2023-07-26", Time = "10:00 AM", Action = "Hold" },
-                new Appointment { Number = 2, Name = "Jane Smith", PhoneNumber = "0987654321", AppointmentType = "Follow-up", Date = "2023-07-27", Time = "11:00 AM", Action = "Hold" }
-            };
+                connection.Open();
+                string query = "select ap.AppointmentID,cu.CustomerName,cu.MobileNumber,ap.AppointmentDate,ap.AppointmentTime from APPOINTMENT ap inner join CUSTOMER cu on ap.CustomerID=cu.CustomerID;";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Appointment Appnt = new Appointment
+                        {
+                            Number = reader.GetInt32(0),
+                            Name = reader.GetString(1),
+                            PhoneNumber = reader.GetString(2),
+                            Date = reader.GetDateTime(3),
+                            Time = reader.GetTimeSpan(4),
+
+
+                        };
+                        appmnts.Add(Appnt);
+                    }
+                }
+            }
+
+            Appointments = appmnts;
+
         }
 
         private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
@@ -52,7 +81,7 @@ namespace StudioManagement
 
                 if (fromDate.HasValue && toDate.HasValue)
                 {
-                    DateTime appointmentDate = DateTime.Parse(a.Date);
+                    DateTime? appointmentDate = a.Date;
                     dateMatch = appointmentDate >= fromDate.Value && appointmentDate <= toDate.Value;
                 }
 
@@ -79,9 +108,8 @@ namespace StudioManagement
         public int Number { get; set; }
         public string? Name { get; set; }
         public string? PhoneNumber { get; set; }
-        public string? AppointmentType { get; set; }
-        public string? Date { get; set; }
-        public string? Time { get; set; }
+        public DateTime? Date { get; set; }
+        public TimeSpan? Time { get; set; }
         public string? Action { get; set; }
     }
 }

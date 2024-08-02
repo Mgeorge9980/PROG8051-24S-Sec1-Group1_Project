@@ -13,7 +13,7 @@
     <Compile Update="AddStaff.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ADMINdashboard.xaml.cs">
+    <Compile Update="AdminDashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="FeedbackAdmin.xaml.cs">
@@ -26,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Logout.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MyProfile.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="OrderListView.xaml.cs">
@@ -49,7 +52,7 @@
     <Compile Update="ViewAppointment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View Staff.xaml.cs">
+    <Compile Update="ViewStaffDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MyCustomer.xaml.cs">
@@ -63,7 +66,7 @@
     <Page Update="AddStaff.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ADMINdashboard.xaml">
+    <Page Update="AdminDashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="FeedbackAdmin.xaml">
@@ -79,6 +82,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MyProfile.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="OrderListView.xaml">
@@ -102,7 +108,7 @@
     <Page Update="ViewAppointment.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View Staff.xaml">
+    <Page Update="ViewStaffDetails.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MyCustomer.xaml">

@@ -1,27 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace StudioManagement
 {
-    /// <summary>
-    /// Interaction logic for UserDashboard.xaml
-    /// </summary>
-    public partial class UserDashboard : Window
+    public partial class UserDashboardWindow : Window
     {
-        public UserDashboard()
+        public UserDashboardWindow()
         {
             InitializeComponent();
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is ListBox listBox)
+            {
+                if (listBox.SelectedItem is ListBoxItem selectedItem)
+                {
+                    string selectedContent = selectedItem.Content.ToString();
+
+                    switch (selectedContent)
+                    {
+                        case "Appointments":
+                            var viewAppointmentWindow = new ViewAppointmentWindow();
+                            viewAppointmentWindow.Show();
+                            this.Close();
+                            break;
+                        case "My Profile":
+                            var myProfileWindow = new MyProfileWindow();
+                            myProfileWindow.Show();
+                            this.Close();
+                            break;
+                        case "Logout":
+                            var logoutWindow = new LogoutWindow();
+                            logoutWindow.Show();
+                            this.Close();
+                            break;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Data.SqlClient;
 
 namespace StudioManagement
 {
@@ -13,7 +15,7 @@ namespace StudioManagement
             this.DataContext = this;
 
             // Bind an empty list to the DataGrid
-            CustomerDataGrid.ItemsSource = new List<Customer>();
+            CustomerDataGrid.ItemsSource = GetProducts();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -33,6 +35,33 @@ namespace StudioManagement
                         // Handle other cases similarly
                 }
             }
+        }
+        public List<Customer> GetProducts()
+        {
+            List<Customer> products = new List<Customer>();
+
+            using (SqlConnection connection = new SqlConnection("Server=MERLIN\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
+            {
+                connection.Open();
+                string query = "select CustomerName,MobileNumber from CUSTOMER";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Customer product = new Customer
+                        {
+                            Name = reader.GetString(0),
+                            PhoneNumber = reader.GetString(1),
+                            
+                        };
+                        products.Add(product);
+                    }
+                }
+            }
+
+            return products;
         }
     }
 

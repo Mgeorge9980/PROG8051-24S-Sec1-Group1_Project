@@ -1,12 +1,110 @@
-﻿<Window x:Class="StudioManagement.UserDashboard"
+﻿<Window x:Class="StudioManagement.UserDashboardWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:StudioManagement"
-        mc:Ignorable="d"
-        Title="UserDashboard" Height="450" Width="800">
-    <Grid>
-        
+        Title="User Dashboard" Height="800" Width="1200">
+    <Grid Background="#2F465B">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Background="#374A5E">
+            <TextBlock Text="Lens Studio" FontSize="28" FontWeight="Bold" Foreground="White" Margin="20"/>
+            <ListBox Background="#374A5E" Foreground="White" BorderThickness="0" SelectionChanged="ListBox_SelectionChanged">
+                <ListBoxItem Content="Home" />
+                <ListBoxItem Content="My Profile" />
+                <ListBoxItem Content="Appointments" />
+                <ListBoxItem Content="Orders" />
+                <ListBoxItem Content="Services" />
+                <ListBoxItem Content="Feedbacks" />
+                <ListBoxItem Content="FAQs" />
+                <ListBoxItem Content="Contact Us" />
+                <ListBoxItem Content="Logout" />
+            </ListBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Frame Your World With Us!" FontSize="18" FontWeight="Bold" Foreground="White" HorizontalAlignment="Right" Margin="10"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                <Border BorderBrush="Gray" BorderThickness="1" Width="150" Height="100" Margin="10">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="3" FontSize="24" FontWeight="Bold" Foreground="White"/>
+                        <TextBlock Text="Appointments Today" FontSize="12" Foreground="White"/>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Gray" BorderThickness="1" Width="150" Height="100" Margin="10">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="5" FontSize="24" FontWeight="Bold" Foreground="White"/>
+                        <TextBlock Text="Orders Today" FontSize="12" Foreground="White"/>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Gray" BorderThickness="1" Width="150" Height="100" Margin="10">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="1" FontSize="24" FontWeight="Bold" Foreground="White"/>
+                        <TextBlock Text="Feedbacks Pending" FontSize="12" Foreground="White"/>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Gray" BorderThickness="1" Width="150" Height="100" Margin="10">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="4" FontSize="24" FontWeight="Bold" Foreground="White"/>
+                        <TextBlock Text="Total Feedbacks" FontSize="12" Foreground="White"/>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Gray" BorderThickness="1" Width="150" Height="100" Margin="10">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="12" FontSize="24" FontWeight="Bold" Foreground="White"/>
+                        <TextBlock Text="Total Customers" FontSize="12" Foreground="White"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+            <TextBlock Text="Upcoming Appointments" FontSize="18" FontWeight="Bold" Foreground="White" Margin="20"/>
+            <StackPanel Margin="20">
+                <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="10">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Width="300">
+                            <TextBlock Text="Individual Portrait" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                            <TextBlock Text="August 1, 10:30 AM - 11:00 AM" FontSize="12" Foreground="White"/>
+                        </StackPanel>
+                        <StackPanel Width="200">
+                            <TextBlock Text="John Doe" FontSize="16" Foreground="White"/>
+                            <TextBlock Text="Phone: " FontSize="12" Foreground="White"/>
+                            <TextBlock Text="Email: " FontSize="12" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="10">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Width="300">
+                            <TextBlock Text="Family Portrait" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                            <TextBlock Text="August 2, 11:30 AM - 12:30 PM" FontSize="12" Foreground="White"/>
+                        </StackPanel>
+                        <StackPanel Width="200">
+                            <TextBlock Text="Jane Smith" FontSize="16" Foreground="White"/>
+                            <TextBlock Text="Phone: " FontSize="12" Foreground="White"/>
+                            <TextBlock Text="Email: " FontSize="12" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                <StackPanel Margin="10">
+                    <TextBlock Text="STAFF IN SHIFT" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Alice Johnson" FontSize="14" Foreground="White" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Phone: " FontSize="12" Foreground="White" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Email: " FontSize="12" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <TextBlock Text="CUSTOMER REVIEWS" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="Excellent" FontSize="12" Foreground="White"/>
+                        <TextBlock Text="Great" FontSize="12" Foreground="White"/>
+                        <TextBlock Text="Good" FontSize="12" Foreground="White"/>
+                        <TextBlock Text="Average" FontSize="12" Foreground="White"/>
+                        <TextBlock Text="Poor" FontSize="12" Foreground="White"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

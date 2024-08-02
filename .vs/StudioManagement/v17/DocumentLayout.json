@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\",
+  "WorkspaceRootPath": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\userdashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\userdashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:userdashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\admindashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\admindashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:admindashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\admindashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\admindashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:admindashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,9 +28,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UserDashboard.xaml",
-              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\UserDashboard.xaml",
+              "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\UserDashboard.xaml",
               "RelativeDocumentMoniker": "UserDashboard.xaml",
-              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\UserDashboard.xaml",
+              "ToolTip": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\UserDashboard.xaml",
               "RelativeToolTip": "UserDashboard.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-07-30T21:10:01.969Z",
@@ -40,26 +40,24 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ADMINdashboard.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ADMINdashboard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ADMINdashboard.xaml.cs",
               "RelativeDocumentMoniker": "ADMINdashboard.xaml.cs",
-              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ADMINdashboard.xaml.cs",
+              "ToolTip": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ADMINdashboard.xaml.cs",
               "RelativeToolTip": "ADMINdashboard.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T21:02:12.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T21:02:12.896Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ADMINdashboard.xaml",
-              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ADMINdashboard.xaml",
+              "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ADMINdashboard.xaml",
               "RelativeDocumentMoniker": "ADMINdashboard.xaml",
-              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ADMINdashboard.xaml",
+              "ToolTip": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ADMINdashboard.xaml",
               "RelativeToolTip": "ADMINdashboard.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-30T20:29:49.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T20:29:49.24Z"
             }
           ]
         }

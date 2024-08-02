@@ -20,15 +20,34 @@ namespace StudioManagement
 
                     switch (selectedContent)
                     {
-                        case "Appointments":
-                            var viewAppointmentWindow = new ViewAppointmentWindow();
-                            viewAppointmentWindow.Show();
-                            this.Close();
-                            break;
+                      
                         case "My Customers":
                             var myCustomerWindow = new MyCustomerWindow();
                             myCustomerWindow.Show();
-                            this.Close();
+                            break;
+                        case "Appointments":
+                            var ViewAppointmentWindow = new ViewAppointmentWindow();
+                            ViewAppointmentWindow.Show();
+                            break;
+                        case "Orders":
+                            var OrderWindow = new OrderWindow();
+                            OrderWindow.Show();
+                            break;
+                        case "Services":
+                            var ServiceAdminWindow = new ServiceAdminWindow();
+                            ServiceAdminWindow.Show();
+                            break;
+                        case "Staff Schedule":
+                            var StaffScheduleWindow = new StaffScheduleWindow();
+                            StaffScheduleWindow.Show();
+                            break;
+                        case "Staff Details":
+                            var ViewStaffDetailsWindow = new ViewStaffDetailsWindow();
+                            ViewStaffDetailsWindow.Show();
+                            break;
+                        case "Feedbacks":
+                            var ViewRatingsWindow = new ViewRatingsWindow();
+                            ViewRatingsWindow.Show();
                             break;
                         case "Logout":
                             var logoutWindow = new LogoutWindow();
