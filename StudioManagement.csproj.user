@@ -37,6 +37,9 @@
     <Compile Update="OrderListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PlaceOrder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ProceedFP.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,6 +97,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="OrderListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PlaceOrder.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ProceedFP.xaml">
