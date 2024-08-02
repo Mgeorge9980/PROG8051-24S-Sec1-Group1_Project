@@ -58,6 +58,9 @@
     <Compile Update="ViewAppointment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ViewServicesUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ViewStaffDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,6 +121,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ViewAppointment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewServicesUser.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ViewStaffDetails.xaml">
