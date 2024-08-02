@@ -20,9 +20,9 @@
             <Expander Header="Can I take passports without appointment?" FontSize="16" Foreground="White" Background="#3A5A6E" Margin="10">
                 <TextBlock Text="Yes. You can walk in" Foreground="White" Margin="10"/>
             </Expander>
-            <!-- Question 4 -->
-             <Expander Header="Can I take passports without appointment?" FontSize="16" Foreground="White" Background="#3A5A6E" Margin="10">
-     <TextBlock Text="Yes. You can walk in" Foreground="White" Margin="10"/>
+            <!-- Question 5 -->
+             <Expander Header="My passport photo got rejected, can i get refund?" FontSize="16" Foreground="White" Background="#3A5A6E" Margin="10">
+     <TextBlock Text="We gurantee our pictures!! We will do a reshoot..!" Foreground="White" Margin="10"/>
  </Expander>
 
             <!-- Question 4 -->
