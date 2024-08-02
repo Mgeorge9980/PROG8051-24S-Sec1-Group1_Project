@@ -68,7 +68,7 @@ namespace StudioManagement {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/StudioManagement;V1.0.0.0;component/serviceadmin.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/StudioManagement;component/serviceadmin.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ServiceAdmin.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

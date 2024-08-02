@@ -20,6 +20,15 @@
             <Expander Header="Can I take passports without appointment?" FontSize="16" Foreground="White" Background="#3A5A6E" Margin="10">
                 <TextBlock Text="Yes. You can walk in" Foreground="White" Margin="10"/>
             </Expander>
+            <!-- Question 4 -->
+             <Expander Header="Can I take passports without appointment?" FontSize="16" Foreground="White" Background="#3A5A6E" Margin="10">
+     <TextBlock Text="Yes. You can walk in" Foreground="White" Margin="10"/>
+ </Expander>
+
+            <!-- Question 4 -->
+            <Expander Header="How much is for normal passport?" FontSize="16" Foreground="White" Background="#3A5A6E" Margin="10">
+                <TextBlock Text="$19.99 For all country passports" Foreground="White" Margin="10"/>
+            </Expander>
         </StackPanel>
     </Grid>
 </Window>
