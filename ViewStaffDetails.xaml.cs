@@ -30,7 +30,9 @@ namespace StudioManagement
         private void AddNewStaffButton_Click(object sender, RoutedEventArgs e)
         {
             // Handle add new staff logic here
-            MessageBox.Show("Add New Staff button clicked");
+            //MessageBox.Show("Add New Staff button clicked");
+            AddStaffWindow addStaffWindow = new AddStaffWindow();
+            addStaffWindow.Show();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)

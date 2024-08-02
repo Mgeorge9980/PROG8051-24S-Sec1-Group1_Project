@@ -10,7 +10,7 @@
     <Compile Update="AddServiceAdmin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="AddStaff.xaml.cs">
+    <Compile Update="AddStaff.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="AdminDashboard.xaml.cs">
