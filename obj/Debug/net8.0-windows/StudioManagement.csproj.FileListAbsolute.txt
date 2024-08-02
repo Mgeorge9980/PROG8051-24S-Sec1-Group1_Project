@@ -81,7 +81,6 @@ C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-wi
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewAppointment.g.cs
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioManagement_MarkupCompile.cache
-C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioManagement_MarkupCompile.lref
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\AddServiceAdmin.baml
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioManagement.g.resources
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioManagement.GeneratedMSBuildEditorConfig.editorconfig
@@ -157,3 +156,13 @@ C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-wi
 C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioMa.61C877BD.Up2Date
 C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewStaffDetails.baml
 C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewStaffDetails.g.cs
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioManagement.csproj.AssemblyReference.cache
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewStaffDetails.baml
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewStaffDetails.g.cs
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioMa.61C877BD.Up2Date

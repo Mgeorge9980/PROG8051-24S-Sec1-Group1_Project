@@ -29,7 +29,7 @@ namespace StudioManagement
 
             List<Appointment> appmnts = new List<Appointment>();
 
-            using (SqlConnection connection = new SqlConnection("Server=MERLIN\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
+            using (SqlConnection connection = new SqlConnection("Server=SHILPA-PC\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
             {
                 connection.Open();
                 string query = "select ap.AppointmentID,cu.CustomerName,cu.MobileNumber,ap.AppointmentDate,ap.AppointmentTime from APPOINTMENT ap inner join CUSTOMER cu on ap.CustomerID=cu.CustomerID;";

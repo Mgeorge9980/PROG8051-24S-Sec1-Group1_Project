@@ -28,7 +28,7 @@ namespace StudioManagement
         private void btnAddService_Click(object sender, RoutedEventArgs e)
         {
             {
-               AddServiceAdmin AddServ=new AddServiceAdmin();
+                AddServiceAdminWindow AddServ =new AddServiceAdminWindow();
                 AddServ.Show();
             }
         }

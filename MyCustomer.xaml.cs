@@ -40,7 +40,7 @@ namespace StudioManagement
         {
             List<Customer> products = new List<Customer>();
 
-            using (SqlConnection connection = new SqlConnection("Server=MERLIN\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
+            using (SqlConnection connection = new SqlConnection("Server=SHILPA-PC\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
             {
                 connection.Open();
                 string query = "select CustomerName,MobileNumber from CUSTOMER";

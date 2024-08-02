@@ -1,27 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace StudioManagement
 {
-    /// <summary>
-    /// Interaction logic for AddaServiceAdmin.xaml
-    /// </summary>
-    public partial class AddServiceAdmin : Window
+    public partial class AddServiceAdminWindow : Window
     {
-        public AddServiceAdmin()
+        public AddServiceAdminWindow()
         {
             InitializeComponent();
+        }
+
+        private void SaveServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            string serviceName = ServiceNameTextBox.Text;
+            string rateText = RateTextBox.Text;
+
+            // Validate input
+            if (string.IsNullOrWhiteSpace(serviceName) || string.IsNullOrWhiteSpace(rateText))
+            {
+                MessageBox.Show("Please enter both service name and rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (!decimal.TryParse(rateText, out decimal rate))
+            {
+                MessageBox.Show("Please enter a valid rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Logic to save the new service
+            MessageBox.Show($"Service '{serviceName}' with rate {rate:C} added successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            // Clear the text fields
+            ServiceNameTextBox.Clear();
+            RateTextBox.Clear();
+        }
+
+        private void ServiceNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ServiceNamePlaceholder.Visibility = string.IsNullOrWhiteSpace(ServiceNameTextBox.Text) ? Visibility.Visible : Visibility.Hidden;
+        }
+
+        private void RateTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            RatePlaceholder.Visibility = string.IsNullOrWhiteSpace(RateTextBox.Text) ? Visibility.Visible : Visibility.Hidden;
         }
     }
 }
