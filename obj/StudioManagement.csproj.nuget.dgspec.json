@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shilp\\Source\\Repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj": {}
+    "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shilp\\Source\\Repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj": {
+    "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shilp\\Source\\Repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj",
+        "projectUniqueName": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj",
         "projectName": "StudioManagement",
-        "projectPath": "C:\\Users\\shilp\\Source\\Repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj",
+        "projectPath": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj",
         "packagesPath": "C:\\Users\\shilp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shilp\\Source\\Repos\\PROG8051-24S-Sec1-Group1_Project\\obj\\",
+        "outputPath": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

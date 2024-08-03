@@ -39,6 +39,7 @@ namespace StudioManagement
                         {
                             Name = reader.GetString(0),
                             PhoneNumber = reader.GetString(1),
+                            EmailAddress = reader.GetString(2),
 
                         };
 
