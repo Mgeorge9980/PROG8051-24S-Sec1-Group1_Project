@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Data.SqlClient;
 using System.Windows.Controls.Primitives;
+using System.Configuration;
+using static StudioManagement.MyProfileWindow;
 
 namespace StudioManagement
 {
@@ -30,7 +32,7 @@ namespace StudioManagement
                     this.Close(); // Close the login window
                 }
                     
-                    else if (VerifyCredentials(email, password))
+                    else if (VerifyCredentials(email, password)!=null)
                 {
                     // Credentials are correct, proceed to the user dashboard
                     UserDashboardWindow userDashboardWindow = new UserDashboardWindow();
@@ -58,31 +60,35 @@ namespace StudioManagement
             PasswordPlaceholder.Visibility = string.IsNullOrEmpty(PasswordTextBox.Password) ? Visibility.Visible : Visibility.Hidden;
         }
 
-        private bool VerifyCredentials(string email, string password)
+        private int? VerifyCredentials(string email, string password)
         {
-            // Connection string to your database
-            string connectionString = "Server=MERLIN\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;";
-
             // Query to check the credentials
-            string query = "SELECT COUNT(1) FROM CUSTOMER WHERE EmailID = @EmailId AND Password = @Password;";
+            string query = "SELECT top 1 CustomerID FROM CUSTOMER WHERE EmailID = @EmailId AND Password = @Password;";
 
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@EmailId", email);
                 command.Parameters.AddWithValue("@Password", password);
-
+                int? CustID = null;
                 try
                 {
                     connection.Open();
-                    int result = (int)command.ExecuteScalar();
-                    return result == 1;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            CustID = reader.GetInt32(0);   
+                        }
+                    }
+                    Properties.Settings.Default.UserID = (int)CustID;
+                    Properties.Settings.Default.Save();
+                    return CustID;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("An error occurred while connecting to the database: " + ex.Message);
-                    return false;
+                    return null;
                 }
             }
         }

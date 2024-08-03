@@ -1,7 +1,60 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\myprofile.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:myprofile.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\studiomanagement.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:studiomanagement.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\mycustomer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:mycustomer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\studiomanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:studiomanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\userdashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:userdashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\viewservicesuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:viewservicesuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\bookappoinment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:bookappoinment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\bookappoinment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:bookappoinment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\serviceadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:serviceadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\addserviceadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:addserviceadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +62,173 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Settings.settings",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Properties\\Settings.settings",
+              "RelativeDocumentMoniker": "Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Properties\\Settings.settings",
+              "RelativeToolTip": "Properties\\Settings.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
+              "WhenOpened": "2024-08-03T18:01:52.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\login.xaml.cs",
+              "RelativeDocumentMoniker": "login.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\login.xaml.cs",
+              "RelativeToolTip": "login.xaml.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAYwFQAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T17:54:57.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudioManagement",
+              "DocumentMoniker": "C:\\Users\\shilp\\Source\\Repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj",
+              "RelativeDocumentMoniker": "StudioManagement.csproj",
+              "ToolTip": "C:\\Users\\shilp\\Source\\Repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj",
+              "RelativeToolTip": "StudioManagement.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-03T17:51:59.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudioManagement",
+              "DocumentMoniker": "C:\\Users\\shilp\\Source\\Repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj",
+              "RelativeDocumentMoniker": "StudioManagement.csproj",
+              "ToolTip": "C:\\Users\\shilp\\Source\\Repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj",
+              "RelativeToolTip": "StudioManagement.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-03T17:52:02.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MyCustomer.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\MyCustomer.xaml.cs",
+              "RelativeDocumentMoniker": "MyCustomer.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\MyCustomer.xaml.cs",
+              "RelativeToolTip": "MyCustomer.xaml.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwEQAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T17:35:56.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyProfile.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\MyProfile.xaml.cs",
+              "RelativeDocumentMoniker": "MyProfile.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\MyProfile.xaml.cs",
+              "RelativeToolTip": "MyProfile.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwCAAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T17:34:50.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Signup.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml.cs",
+              "RelativeDocumentMoniker": "Signup.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml.cs",
+              "RelativeToolTip": "Signup.xaml.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwD8AAABlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T17:03:07.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDashboard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\UserDashboard.xaml.cs",
+              "RelativeDocumentMoniker": "UserDashboard.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\UserDashboard.xaml.cs",
+              "RelativeToolTip": "UserDashboard.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T17:00:53.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookAppoinment.xaml",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\BookAppoinment.xaml",
+              "RelativeDocumentMoniker": "BookAppoinment.xaml",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\BookAppoinment.xaml",
+              "RelativeToolTip": "BookAppoinment.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-03T16:56:30.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BookAppoinment.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\BookAppoinment.xaml.cs",
+              "RelativeDocumentMoniker": "BookAppoinment.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\BookAppoinment.xaml.cs",
+              "RelativeToolTip": "BookAppoinment.xaml.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAIwCUAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T16:56:21.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ViewServicesUser.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ViewServicesUser.xaml.cs",
+              "RelativeDocumentMoniker": "ViewServicesUser.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ViewServicesUser.xaml.cs",
+              "RelativeToolTip": "ViewServicesUser.xaml.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAACwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T16:47:19.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AddServiceAdmin.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\AddServiceAdmin.xaml.cs",
+              "RelativeDocumentMoniker": "AddServiceAdmin.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\AddServiceAdmin.xaml.cs",
+              "RelativeToolTip": "AddServiceAdmin.xaml.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwDUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T16:36:21.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ServiceAdmin.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ServiceAdmin.xaml.cs",
+              "RelativeDocumentMoniker": "ServiceAdmin.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ServiceAdmin.xaml.cs",
+              "RelativeToolTip": "ServiceAdmin.xaml.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAvwC4AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T16:35:46.814Z",
+              "EditorCaption": ""
             }
           ]
         }

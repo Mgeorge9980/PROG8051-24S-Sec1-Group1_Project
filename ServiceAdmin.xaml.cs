@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace StudioManagement
 {
@@ -23,6 +25,8 @@ namespace StudioManagement
         public ServiceAdminWindow()
         {
             InitializeComponent();
+            ViewServicesWindow vs = new ViewServicesWindow();
+            ServicesDataGrid.ItemsSource = vs.GetService();
         }
 
         private void btnAddService_Click(object sender, RoutedEventArgs e)
@@ -30,6 +34,8 @@ namespace StudioManagement
             {
                 AddServiceAdminWindow AddServ =new AddServiceAdminWindow();
                 AddServ.Show();
+                this.Close();
+
             }
         }
         public class Service
@@ -38,7 +44,7 @@ namespace StudioManagement
             public string ServiceName { get; set; }
             public string ServicePrice { get; set; }
         }
-
+      
         private void ServicesDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 

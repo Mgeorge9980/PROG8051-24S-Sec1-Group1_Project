@@ -3,6 +3,7 @@ using System.Net;
 using System.Windows;
 using System.Windows.Controls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace StudioManagement
 {
@@ -30,10 +31,10 @@ namespace StudioManagement
                 MessageBox.Show("Please enter a valid rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            String insertQuery = "Insert into Service(ServiceName, ServicePrice)values(@ServiceName,@ServicePrice)";
+            String insertQuery = "Insert into Service(ServiceName,ImageCount,ServiceDescription,PhotoSize, ServicePrice)values(@ServiceName,@ImageCount,@ServiceDescription,@PhotoSize,@ServicePrice)";
 
             // Create a new connection object
-            using (SqlConnection connection = new SqlConnection("SHILPA-PC\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
             {
                 try
                 {
@@ -44,8 +45,10 @@ namespace StudioManagement
                     using (SqlCommand command = new SqlCommand(insertQuery, connection))
                     {
                         // Define parameters and their values
-                        //command.Parameters.AddWithValue("@customername", firstName + " "+lastName);
                         command.Parameters.AddWithValue("@ServiceName", serviceName);
+                        command.Parameters.AddWithValue("@ImageCount", 0);
+                        command.Parameters.AddWithValue("@ServiceDescription", "");
+                        command.Parameters.AddWithValue("@PhotoSize", "");
                         command.Parameters.AddWithValue("@ServicePrice", rateText);
 
 
@@ -57,6 +60,8 @@ namespace StudioManagement
                         {
                             MessageBox.Show($"Service '{serviceName}' with rate {rate:C} added successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                             this.Close();
+                            ServiceAdminWindow servAdd=new ServiceAdminWindow();
+                            servAdd.Show();
                         }
                         else
                         {

@@ -11,16 +11,24 @@ namespace StudioManagement
         public BookingAppointmentWindow()
         {
             InitializeComponent();
+            ViewServicesWindow vs=new ViewServicesWindow();
+
+            ServiceTypeComboBox.ItemsSource = vs.GetService();
         }
 
         private void BookButton_Click(object sender, RoutedEventArgs e)
         {
-            // Get the input values from the controls
-            string serviceType = (ServiceTypeComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            int serviceID = 0;
+            if (ServiceTypeComboBox.SelectedValue is int selectedServiceId)
+            {
+                serviceID = selectedServiceId;
+            }
+
+          
             string appointmentDate = DatePicker.SelectedDate.HasValue ? DatePicker.SelectedDate.Value.ToShortDateString() : "";
 
             // Validate inputs
-            if (string.IsNullOrWhiteSpace(serviceType) || string.IsNullOrWhiteSpace(appointmentDate))
+            if (serviceID==0 || string.IsNullOrWhiteSpace(appointmentDate))
             {
                 MessageBox.Show("Please select a service type and date.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -28,7 +36,7 @@ namespace StudioManagement
 
             // Implement the logic to book the appointment here
             // For demonstration, we'll just show a message box with the details
-            MessageBox.Show($"Appointment Booked:\n\nService Type: {serviceType}\nDate: {appointmentDate}",
+            MessageBox.Show($"Appointment Booked:\n\nService Type: {serviceID}\nDate: {appointmentDate}",
                             "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
             // Optionally, clear the inputs after booking

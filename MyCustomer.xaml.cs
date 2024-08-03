@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace StudioManagement
 {
@@ -15,7 +16,7 @@ namespace StudioManagement
             this.DataContext = this;
 
             // Bind an empty list to the DataGrid
-            CustomerDataGrid.ItemsSource = GetProducts();
+            CustomerDataGrid.ItemsSource = GetCustomer();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -36,11 +37,11 @@ namespace StudioManagement
                 }
             }
         }
-        public List<Customer> GetProducts()
+        public List<Customer> GetCustomer()
         {
-            List<Customer> products = new List<Customer>();
+            List<Customer> Customers = new List<Customer>();
 
-            using (SqlConnection connection = new SqlConnection("Server=SHILPA-PC\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
             {
                 connection.Open();
                 string query = "select CustomerName,MobileNumber from CUSTOMER";
@@ -56,12 +57,12 @@ namespace StudioManagement
                             PhoneNumber = reader.GetString(1),
                             
                         };
-                        products.Add(product);
+                        Customers.Add(product);
                     }
                 }
             }
 
-            return products;
+            return Customers;
         }
     }
 
