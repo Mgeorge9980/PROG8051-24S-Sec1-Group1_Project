@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\viewservicesuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,8 +57,12 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Signup.xaml",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml",
               "RelativeDocumentMoniker": "Signup.xaml",
@@ -70,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "login.xaml.cs",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\login.xaml.cs",
               "RelativeDocumentMoniker": "login.xaml.cs",
@@ -83,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "login.xaml",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\login.xaml",
               "RelativeDocumentMoniker": "login.xaml",
@@ -95,13 +99,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Signup.xaml.cs",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml.cs",
               "RelativeDocumentMoniker": "Signup.xaml.cs",
               "ToolTip": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml.cs",
               "RelativeToolTip": "Signup.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAA7AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-03T15:28:42.944Z",
               "EditorCaption": ""

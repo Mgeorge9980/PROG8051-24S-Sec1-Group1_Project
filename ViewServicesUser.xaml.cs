@@ -8,7 +8,7 @@ namespace StudioManagement
     /// </summary>
     public partial class ViewServicesWindow : Window
     {
-        public ViewServicesWindow(List<ServiceAdminWindow.Service> services) //Comment
+        public ViewServicesWindow(List<ServiceAdminWindow.Service> services) //Comment added
         {
             InitializeComponent();
             ServicesDataGrid.ItemsSource = services;
