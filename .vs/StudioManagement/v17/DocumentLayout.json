@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\merli\\source\\repos\\prog8051-24s-sec1-group1_project\\viewservicesuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:viewservicesuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,19 +54,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Signup.xaml",
+              "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml",
+              "RelativeDocumentMoniker": "Signup.xaml",
+              "ToolTip": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml",
+              "RelativeToolTip": "Signup.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-03T15:32:15.992Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\login.xaml.cs",
+              "RelativeDocumentMoniker": "login.xaml.cs",
+              "ToolTip": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\login.xaml.cs",
+              "RelativeToolTip": "login.xaml.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwDkAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T15:31:37.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "login.xaml",
+              "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\login.xaml",
+              "RelativeDocumentMoniker": "login.xaml",
+              "ToolTip": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\login.xaml",
+              "RelativeToolTip": "login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-03T15:29:10.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Signup.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml.cs",
+              "RelativeDocumentMoniker": "Signup.xaml.cs",
+              "ToolTip": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml.cs",
+              "RelativeToolTip": "Signup.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T15:28:42.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ViewServicesUser.xaml.cs",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ViewServicesUser.xaml.cs",
               "RelativeDocumentMoniker": "ViewServicesUser.xaml.cs",
@@ -63,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "ContactUs.xaml",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ContactUs.xaml",
               "RelativeDocumentMoniker": "ContactUs.xaml",
@@ -74,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ViewServicesUser.xaml",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ViewServicesUser.xaml",
               "RelativeDocumentMoniker": "ViewServicesUser.xaml",
@@ -85,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "UserDashboard.xaml.cs",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\UserDashboard.xaml.cs",
               "RelativeDocumentMoniker": "UserDashboard.xaml.cs",
@@ -97,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "UserDashboard.xaml",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\UserDashboard.xaml",
               "RelativeDocumentMoniker": "UserDashboard.xaml",
@@ -108,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "ADMINdashboard.xaml",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ADMINdashboard.xaml",
               "RelativeDocumentMoniker": "ADMINdashboard.xaml",
@@ -119,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "ADMINdashboard.xaml.cs",
               "DocumentMoniker": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\ADMINdashboard.xaml.cs",
               "RelativeDocumentMoniker": "ADMINdashboard.xaml.cs",

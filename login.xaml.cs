@@ -15,7 +15,7 @@ namespace StudioManagement
         private void SignInButton_Click(object sender, RoutedEventArgs e)
         {
             string email = EmailTextBox.Text;
-            string password = PasswordBox.Password;
+            string password = PasswordTextBox.Password;
 
             // Check if both fields are filled out 
             if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
@@ -55,7 +55,7 @@ namespace StudioManagement
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            PasswordPlaceholder.Visibility = string.IsNullOrEmpty(PasswordBox.Password) ? Visibility.Visible : Visibility.Hidden;
+            PasswordPlaceholder.Visibility = string.IsNullOrEmpty(PasswordTextBox.Password) ? Visibility.Visible : Visibility.Hidden;
         }
 
         private bool VerifyCredentials(string email, string password)

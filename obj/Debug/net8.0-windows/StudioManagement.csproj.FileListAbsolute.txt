@@ -131,7 +131,6 @@ C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-wi
 C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewAppointment.g.cs
 C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioManagement_MarkupCompile.cache
-C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioManagement_MarkupCompile.lref
 C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\AddServiceAdmin.baml
 C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioManagement.g.resources
 C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioManagement.GeneratedMSBuildEditorConfig.editorconfig
@@ -176,3 +175,15 @@ C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-wi
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\Feedback.g.cs
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\PlaceOrder.g.cs
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewServicesUser.g.cs
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\BookAppoinment.baml
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ContactUs.baml
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\FAQs.baml
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\Feedback.baml
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\PlaceOrder.baml
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewServicesUser.baml
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\BookAppoinment.g.cs
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ContactUs.g.cs
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\FAQs.g.cs
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\Feedback.g.cs
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\PlaceOrder.g.cs
+C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewServicesUser.g.cs

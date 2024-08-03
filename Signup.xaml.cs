@@ -27,7 +27,7 @@ namespace StudioManagement
             string mobileNumber = MobileNumberTextBox.Text;
             string email = EmailTextBox.Text;
             DateTime? dateOfBirth = DOBPicker.SelectedDate;
-            string password = PasswordBox.Password;
+            string password = PasswordTextBox.Password;
             string confirmPassword = ConfirmPasswordBox.Password;
             string address = AddressTextBox.Text; // Optional field
 

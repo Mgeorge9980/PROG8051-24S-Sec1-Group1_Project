@@ -76,7 +76,7 @@ namespace StudioManagement {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/StudioManagement;V1.0.0.0;component/staffschedule.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/StudioManagement;component/staffschedule.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\StaffSchedule.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
