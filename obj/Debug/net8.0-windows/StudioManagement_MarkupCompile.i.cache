@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\
 StudioManagement
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\App.xaml
-241239971985
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\App.xaml
+25-1523187679
 
 29620146680
-199913591785
-AddServiceAdmin.xaml;AddStaff.xaml;ADMINdashboard.xaml;BookAppoinment.xaml;ContactUs.xaml;FAQs.xaml;Feedback.xaml;FeedbackAdmin.xaml;forgotpassword.xaml;login.xaml;Logout.xaml;MainWindow.xaml;MyCustomer.xaml;MyProfile.xaml;OrderListView.xaml;PlaceOrder.xaml;ProceedFP.xaml;ServiceAdmin.xaml;Signup.xaml;StaffSchedule.xaml;UserDashboard.xaml;ViewAppointment.xaml;ViewServicesUser.xaml;ViewStaffDetails.xaml;
+1991924258032
+AddServiceAdmin.xaml;AddStaff.xaml;ADMINdashboard.xaml;BookAppoinment.xaml;ContactUs.xaml;FAQs.xaml;Feedback.xaml;FeedbackAdmin.xaml;forgotpassword.xaml;login.xaml;Logout.xaml;MainWindow.xaml;MyCustomer.xaml;MyProfile.xaml;OrderListView.xaml;PlaceOrder.xaml;ProceedFP.xaml;ServiceAdmin.xaml;Signup.xaml;SignupUser.xaml;StaffSchedule.xaml;UserDashboard.xaml;ViewAppointment.xaml;ViewServicesUser.xaml;ViewStaffDetails.xaml;
 
 False
 

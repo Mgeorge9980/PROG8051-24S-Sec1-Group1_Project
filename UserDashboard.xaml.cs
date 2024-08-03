@@ -6,18 +6,12 @@ namespace StudioManagement
 {
     public partial class UserDashboardWindow : Window
     {
-        private List<ServiceAdminWindow.Service> services;
 
         public UserDashboardWindow()
         {
             InitializeComponent();
             // Initialize your list of services here or load from a data source
-            services = new List<ServiceAdminWindow.Service>
-            {
-                new ServiceAdminWindow.Service { Number = 1, ServiceName = "Photography" },
-                new ServiceAdminWindow.Service { Number = 2, ServiceName = "Videography" }
-                // Add more services as needed
-            };
+            
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -43,7 +37,7 @@ namespace StudioManagement
                             placeOrderWindow.Show();
                             break;
                         case "Services":
-                            var viewServicesWindow = new ViewServicesWindow(services);
+                            var viewServicesWindow = new ViewServicesWindow();
                             viewServicesWindow.Show();
                             break;
                         case "Feedbacks":

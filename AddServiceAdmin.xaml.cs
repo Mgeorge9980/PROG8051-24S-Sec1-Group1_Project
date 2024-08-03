@@ -1,5 +1,8 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Net;
+using System.Windows;
 using System.Windows.Controls;
+using System.Data.SqlClient;
 
 namespace StudioManagement
 {
@@ -27,13 +30,52 @@ namespace StudioManagement
                 MessageBox.Show("Please enter a valid rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            String insertQuery = "Insert into Service(ServiceName, ServicePrice)values(@ServiceName,@ServicePrice)";
 
-            // Logic to save the new service
-            MessageBox.Show($"Service '{serviceName}' with rate {rate:C} added successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            // Create a new connection object
+            using (SqlConnection connection = new SqlConnection("SHILPA-PC\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
+            {
+                try
+                {
+                    // Open the connection
+                    connection.Open();
 
-            // Clear the text fields
-            ServiceNameTextBox.Clear();
-            RateTextBox.Clear();
+                    // Create a command object
+                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                    {
+                        // Define parameters and their values
+                        //command.Parameters.AddWithValue("@customername", firstName + " "+lastName);
+                        command.Parameters.AddWithValue("@ServiceName", serviceName);
+                        command.Parameters.AddWithValue("@ServicePrice", rateText);
+
+
+                        // Execute the command
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Check the result
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show($"Service '{serviceName}' with rate {rate:C} added successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("An error occurred while adding service. Please try again !!");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any errors that may have occurred
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+                // Logic to save the new service
+
+
+                // Clear the text fields
+                ServiceNameTextBox.Clear();
+                RateTextBox.Clear();
+            }
         }
 
         private void ServiceNameTextBox_TextChanged(object sender, TextChangedEventArgs e)

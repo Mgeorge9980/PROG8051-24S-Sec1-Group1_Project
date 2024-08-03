@@ -13,9 +13,9 @@ namespace StudioManagement
         private void LoadUserProfile()
         {
             // Replace these values with actual data retrieval logic
-            string userName = "John Doe";
-            string phoneNumber = "123-456-7890";
-            string emailAddress = "john.doe@example.com";
+            string userName = "Shilpa Gopi";
+            string phoneNumber = "437-599-9684";
+            string emailAddress = "shilpa@gmail.com";
             string orderDetails = "Order #1234: Camera Lens\nOrder #5678: Tripod Stand";
 
             UserNameText.Text = userName;
