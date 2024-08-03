@@ -78,7 +78,9 @@
 
             <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0"  
 
-                       Foreground="White" FontSize="14" Text="Don't have an account? Sign up now"/>
+                       Foreground="White" FontSize="14" Text="Don't have an account? Sign up now"
+                       
+                       TextDecorations="Underline" Cursor="Hand" MouseLeftButtonUp="SignUpTextBlock_MouseLeftButtonUp"/>
 
         </StackPanel>
 

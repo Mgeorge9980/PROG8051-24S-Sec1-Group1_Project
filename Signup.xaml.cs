@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Data.SqlClient;
+using System.Windows;
 
 using System.Windows.Controls;
 
@@ -6,178 +7,90 @@ using System.Windows.Media;
 
 
 
-namespace YourNamespace
+namespace StudioManagement
 
 {
 
-    public static class PlaceholderService
+    public partial class SignupService : Window
 
     {
-
-        public static readonly DependencyProperty PlaceholderProperty =
-
-            DependencyProperty.RegisterAttached(
-
-                "Placeholder",
-
-                typeof(string),
-
-                typeof(PlaceholderService),
-
-                new PropertyMetadata(default(string), OnPlaceholderChanged));
-
-
-
-        public static string GetPlaceholder(UIElement element)
-
+        public SignupService()
         {
-
-            return (string)element.GetValue(PlaceholderProperty);
-
+            InitializeComponent();
         }
 
-
-
-        public static void SetPlaceholder(UIElement element, string value)
-
+        private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
 
-            element.SetValue(PlaceholderProperty, value);
+            string firstName = FirstNameTextBox.Text;
+            string lastName = LastNameTextBox.Text;
+            string mobileNumber = MobileNumberTextBox.Text;
+            string email = EmailTextBox.Text;
+            DateTime? dateOfBirth = DOBPicker.SelectedDate;
+            string password = PasswordBox.Password;
+            string confirmPassword = ConfirmPasswordBox.Password;
+            string address = AddressTextBox.Text; // Optional field
 
-        }
 
-
-
-        private static void OnPlaceholderChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-
-        {
-
-            if (d is TextBox textBox)
-
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email) ||
+            !dateOfBirth.HasValue || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
             {
+                MessageBox.Show("Please fill in all fields !! ");
+                return;
+            }
 
-                textBox.GotFocus -= RemovePlaceholder;
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Passwords do not match.");
+                return;
+            }
 
-                textBox.LostFocus -= ShowPlaceholder;
+            //string insertQuery = "insert into CUSTOMER (customername)values(@customername)";
+            String insertQuery = "INSERT INTO CUSTOMER (CustomerName, MobileNumber, EmailID, DOB, Password, Address) VALUES\r\n(@CustomerName, @MobileNumber, @EmailID ,@DOB, @Password, @Address)";
 
-
-
-                if (!string.IsNullOrEmpty((string)e.NewValue))
-
+            // Create a new connection object
+            using (SqlConnection connection = new SqlConnection("Server=MERLIN\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
+            {
+                try
                 {
+                    // Open the connection
+                    connection.Open();
 
-                    textBox.GotFocus += RemovePlaceholder;
+                    // Create a command object
+                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                    {
+                        // Define parameters and their values
+                        //command.Parameters.AddWithValue("@customername", firstName + " "+lastName);
+                        command.Parameters.AddWithValue("@CustomerName", firstName + " " + lastName);
+                        command.Parameters.AddWithValue("@MobileNumber", mobileNumber);
+                        command.Parameters.AddWithValue("@EmailID", email);
+                        command.Parameters.AddWithValue("@DOB", dateOfBirth.Value);
+                        command.Parameters.AddWithValue("@Address", address);
+                        command.Parameters.AddWithValue("@Password", password); // Note: Passwords should be hashed and secured
 
-                    textBox.LostFocus += ShowPlaceholder;
+                        // Execute the command
+                        int rowsAffected = command.ExecuteNonQuery();
 
+                        // Check the result
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Registration done successfully. Kindly login with your credentials !!");
+                                this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("An error occurred while registering the customer. Please try again !!");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any errors that may have occurred
+                    Console.WriteLine("Error: " + ex.Message);
                 }
 
-
-
-                ShowPlaceholder(textBox, null);
-
-            }
-
-            else if (d is PasswordBox passwordBox)
-
-            {
-
-                passwordBox.GotFocus -= RemovePasswordPlaceholder;
-
-                passwordBox.LostFocus -= ShowPasswordPlaceholder;
-
-
-
-                if (!string.IsNullOrEmpty((string)e.NewValue))
-
-                {
-
-                    passwordBox.GotFocus += RemovePasswordPlaceholder;
-
-                    passwordBox.LostFocus += ShowPasswordPlaceholder;
-
-                }
-
-
-
-                ShowPasswordPlaceholder(passwordBox, null);
-
             }
 
         }
-
-
-
-        private static void RemovePlaceholder(object sender, RoutedEventArgs e)
-
-        {
-
-            if (sender is TextBox textBox && textBox.Text == GetPlaceholder(textBox))
-
-            {
-
-                textBox.Text = string.Empty;
-
-                textBox.Foreground = SystemColors.ControlTextBrush;
-
-            }
-
-        }
-
-
-
-        private static void ShowPlaceholder(object sender, RoutedEventArgs e)
-
-        {
-
-            if (sender is TextBox textBox && string.IsNullOrWhiteSpace(textBox.Text))
-
-            {
-
-                textBox.Text = GetPlaceholder(textBox);
-
-                textBox.Foreground = SystemColors.GrayTextBrush;
-
-            }
-
-        }
-
-
-
-        private static void RemovePasswordPlaceholder(object sender, RoutedEventArgs e)
-
-        {
-
-            if (sender is PasswordBox passwordBox && passwordBox.Password == GetPlaceholder(passwordBox))
-
-            {
-
-                passwordBox.Password = string.Empty;
-
-                passwordBox.Foreground = SystemColors.ControlTextBrush;
-
-            }
-
-        }
-
-
-
-        private static void ShowPasswordPlaceholder(object sender, RoutedEventArgs e)
-
-        {
-
-            if (sender is PasswordBox passwordBox && string.IsNullOrWhiteSpace(passwordBox.Password))
-
-            {
-
-                passwordBox.Password = GetPlaceholder(passwordBox);
-
-                passwordBox.Foreground = SystemColors.GrayTextBrush;
-
-            }
-
-        }
-
     }
-
 }
