@@ -11,9 +11,9 @@
             <TextBlock Text="Select Type" Foreground="White" FontSize="16" Margin="0,10,0,0"/>
             <ComboBox Name="TypeComboBox" Height="30" Margin="0,5,0,10" FontSize="16" Background="White"
                       Foreground="Black">
-                <ComboBoxItem Content="Type A" />
-                <ComboBoxItem Content="Type B" />
-                <ComboBoxItem Content="Type C" />
+                <ComboBoxItem Content="Grad Portraits" />
+                <ComboBoxItem Content="Pet portraits" />
+                <ComboBoxItem Content="Baby Passport" />
             </ComboBox>
 
             <!-- Number -->

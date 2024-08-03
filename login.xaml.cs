@@ -18,10 +18,17 @@ namespace StudioManagement
             if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
             {
                 // Check if the email and password are correct
-                if (email.ToUpper() == "ADMIN" && password == "123") //For Unit Testing Kept demo login and password
+                if (email.ToUpper() == "ADMIN" && password == "123") // For Unit Testing Kept demo login and password
                 {
                     AdminDashboardWindow adminDashboardWindow = new AdminDashboardWindow();
                     adminDashboardWindow.Show();
+                    this.Close();
+                }
+                else if (email.Equals("Shilpa@gmail.com", StringComparison.OrdinalIgnoreCase) && password == "Gopi")
+                {
+                    UserDashboardWindow userDashboardWindow = new UserDashboardWindow();
+                    userDashboardWindow.Show();
+                    this.Close();
                 }
                 else
                 {
