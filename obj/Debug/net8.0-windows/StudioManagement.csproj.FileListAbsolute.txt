@@ -176,3 +176,5 @@ C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-wi
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\Feedback.g.cs
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\PlaceOrder.g.cs
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewServicesUser.g.cs
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\SignupUser.g.cs
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\StudioManagement_MarkupCompile.lref

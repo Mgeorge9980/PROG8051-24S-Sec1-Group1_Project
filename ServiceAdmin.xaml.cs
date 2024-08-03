@@ -36,6 +36,7 @@ namespace StudioManagement
         {
             public int Number { get; set; }
             public string ServiceName { get; set; }
+            public string ServicePrice { get; set; }
         }
 
         private void ServicesDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
