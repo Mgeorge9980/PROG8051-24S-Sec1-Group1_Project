@@ -31,7 +31,8 @@ git clone https://github.com/Mgeorge9980/PROG8051-24S-Sec1-Group1_Project.git
 **2. Open the Project in Visual Studio:**  
 Launch Visual Studio and open the cloned repository.
 
-**3. Database Connection**
+**3. Database Connection**  
+From the Server Explorer, click Connect Database and enter the server name and check the trust server certificate checkbox and enter the database name and ensure the test connection is successful.
 
 **4. Insatll NuGet Packages:**  
 * Right-click on the solution in the Solution Explorer, and then Click on the Manage NuGet Packages option. In the NuGet Package Manager window, Select the Browse tab, Search for System.Data.SqlClient and Press enter
