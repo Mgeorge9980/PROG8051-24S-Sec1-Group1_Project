@@ -27,13 +27,14 @@
                 <DataGridTextColumn Header="Number" Binding="{Binding Number}" Width="*" />
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" />
                 <DataGridTextColumn Header="Phone Number" Binding="{Binding PhoneNumber}" Width="*" />
-                <DataGridTextColumn Header="Service Type" Binding="{Binding AppointmentType}" Width="*" />
+                <DataGridTextColumn Header="Service Type" Binding="{Binding ServiceType}" Width="*" />
                 <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*" />
+                <DataGridTextColumn Header="Date" Binding="{Binding AppointmentStatus}" Width="*" />
          
                 <DataGridTemplateColumn Header="Action" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <ComboBox ItemsSource="{Binding ActionOptions}" SelectedItem="{Binding Action}" Width="120">
+                            <ComboBox Name="ActionCombo" ItemsSource="{Binding ActionOptions}" SelectedItem="{Binding Action}" Width="120" SelectionChanged="ActionCombo_SelectionChanged">
                                 <ComboBoxItem Content="Done" />
                                 <ComboBoxItem Content="Cancelled" />
                                 <ComboBoxItem Content="Hold" />

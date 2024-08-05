@@ -33,7 +33,7 @@ namespace StudioManagement
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
             {
                 connection.Open();
-                string query = "select ap.AppointmentID,cu.CustomerName,cu.MobileNumber,ap.AppointmentDate,ap.AppointmentTime from APPOINTMENT ap inner join CUSTOMER cu on ap.CustomerID=cu.CustomerID;";
+                string query = "select ap.AppointmentID,cu.CustomerName,cu.MobileNumber,ap.AppointmentDate,se.ServiceName,ap.AppointmentStatus from APPOINTMENT ap inner join CUSTOMER cu on ap.CustomerID=cu.CustomerID inner join SERVICE se on ap.ServiceID=se.ServiceID;";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -46,8 +46,8 @@ namespace StudioManagement
                             Name = reader.GetString(1),
                             PhoneNumber = reader.GetString(2),
                             Date = reader.GetDateTime(3),
-                            Time = reader.GetTimeSpan(4),
-
+                            ServiceType = reader.GetString(4),
+                            AppointmentStatus = reader.GetString(5),
 
                         };
                         appmnts.Add(Appnt);
@@ -102,15 +102,22 @@ namespace StudioManagement
 
             AppointmentsDataGrid.ItemsSource = FilteredAppointments;
         }
-    }
 
-    public class Appointment
-    {
-        public int Number { get; set; }
-        public string? Name { get; set; }
-        public string? PhoneNumber { get; set; }
-        public DateTime? Date { get; set; }
-        public TimeSpan? Time { get; set; }
-        public string? Action { get; set; }
+        private void ActionCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        public class Appointment
+        {
+            public int Number { get; set; }
+            public string? ServiceType { get; set; }
+            public string? Name { get; set; }
+            public string? PhoneNumber { get; set; }
+            public DateTime? Date { get; set; }
+            public TimeSpan? Time { get; set; }
+            public string? Action { get; set; }
+            public string? AppointmentStatus { get; set; }
+        }
     }
 }
