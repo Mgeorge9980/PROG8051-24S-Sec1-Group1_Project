@@ -34,7 +34,7 @@ Launch Visual Studio and open the cloned repository.
 **3. Database Connection**  
 From the Server Explorer, click Connect Database and enter the server name and check the trust server certificate checkbox and enter the database name and ensure the test connection is successful.
 
-**4. Insatll NuGet Packages:**  
+**4. Install NuGet Packages:**  
 * Right-click on the solution in the Solution Explorer, and then Click on the Manage NuGet Packages option. In the NuGet Package Manager window, Select the Browse tab, Search for System.Data.SqlClient and Press enter
 * Select the first option, System.Data.SqlClient by Microsoft and Click on the install button to install the package..
 
@@ -53,5 +53,5 @@ Press F5 or click on the "Start" button to run the application.
 
 
 ## Troubleshooting
-**NuGet Package Issues:** Ensure all required NuGet packages are installed. You can manually install missing packages via the NuGet Package Manager.  
-**Database Connection Issues:** Verify the connection string and ensure that SQL Server is running.
+** * NuGet Package Issues:** Ensure all required NuGet packages are installed. You can manually install missing packages via the NuGet Package Manager.  
+** * Database Connection Issues:** Verify the connection string and ensure that SQL Server is running.
