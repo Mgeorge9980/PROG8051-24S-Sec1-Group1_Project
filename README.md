@@ -16,10 +16,10 @@ __MAIN PAGES__
 ## Installation Guidelines
 **PREREQUISITES**
  
-__Operating System:__ Windows 10 or higher  
-__Development Environment:__ Visual Studio 2019 or higher  
-__.NET Framework:__ .NET 5.0 or higher  
-__Database:__ SQL Server 2019
+__* Operating System:__ Windows 10 or higher  
+__* Development Environment:__ Visual Studio 2019 or higher  
+__* .NET Framework:__ .NET 5.0 or higher  
+__* Database:__ SQL Server 2019
 
 **Steps to Install** 
  
@@ -53,5 +53,5 @@ Press F5 or click on the "Start" button to run the application.
 
 
 ## Troubleshooting
-** * NuGet Package Issues:** Ensure all required NuGet packages are installed. You can manually install missing packages via the NuGet Package Manager.  
-** * Database Connection Issues:** Verify the connection string and ensure that SQL Server is running.
+** 1. NuGet Package Issues:** Ensure all required NuGet packages are installed. You can manually install missing packages via the NuGet Package Manager.  
+** 2. Database Connection Issues:** Verify the connection string and ensure that SQL Server is running.
