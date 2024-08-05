@@ -17,8 +17,8 @@ __MAIN PAGES__
 **PREREQUISITES**
  
 __Operating System:__ Windows 10 or higher  
-__Development Environment:__ Visual Studio 2019 or higher
-__.NET Framework:__ .NET 5.0 or higher
+__Development Environment:__ Visual Studio 2019 or higher  
+__.NET Framework:__ .NET 5.0 or higher  
 __Database:__ SQL Server 2019
 
 **Steps to Install** 
