@@ -1,12 +1,11 @@
 # Photo Studio Management System
-## Team Members
-
+**Team Members**  
 * Shweta Chaudhary: Student ID: 8874947  
 * Merlin George: Student ID: 8989980  
 * Shilpa Gopi: Student ID: 8893284  
 * Bala Subramaniyam Venugopal Raja: Student ID: 8892816
 
-**Project Description**  
+## Project Description
 We have decided to build a desktop application to streamline and enhance the operations of a photo studio. The primary purpose of the Photo Studio Management System is to simplify and automate the administrative tasks involved in running a photo studio to improve productivity and the client experience in general. It will provide studio employees with a centralized solution for tracking appointments, managing client details, and handling invoices and other critical features into one platform, freeing them up to concentrate more on creative work and less on administrative duties. 
 
 MAIN PAGES 
