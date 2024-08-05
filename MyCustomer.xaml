@@ -7,20 +7,6 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Background="#374A5E">
-            <TextBlock Text="Lens Studio" FontSize="28" FontWeight="Bold" Foreground="White" Margin="20"/>
-            <ListBox Background="#374A5E" Foreground="White" BorderThickness="0" SelectionChanged="ListBox_SelectionChanged">
-                <ListBoxItem Content="Home" />
-                <ListBoxItem Content="My Customers" />
-                <ListBoxItem Content="Appointments" />
-                <ListBoxItem Content="Orders" />
-                <ListBoxItem Content="Services" />
-                <ListBoxItem Content="Staff Schedule" />
-                <ListBoxItem Content="Staff Details" />
-                <ListBoxItem Content="Feedbacks" />
-                <ListBoxItem Content="Logout" />
-            </ListBox>
-        </StackPanel>
 
         <StackPanel Grid.Column="1" Margin="20">
             <TextBlock Text="My Customers" FontSize="28" FontWeight="Bold" Foreground="Black" Margin="20"/>

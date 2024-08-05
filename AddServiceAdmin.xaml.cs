@@ -31,7 +31,7 @@ namespace StudioManagement
                 MessageBox.Show("Please enter a valid rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            String insertQuery = "Insert into Service(ServiceName,ImageCount,ServiceDescription,PhotoSize, ServicePrice)values(@ServiceName,@ImageCount,@ServiceDescription,@PhotoSize,@ServicePrice)";
+            string insertQuery = "Insert into Service(ServiceName,ImageCount,ServiceDescription,PhotoSize, ServicePrice)values(@ServiceName,@ImageCount,@ServiceDescription,@PhotoSize,@ServicePrice)";
 
             // Create a new connection object
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))

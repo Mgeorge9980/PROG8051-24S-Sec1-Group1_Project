@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows;
 
 namespace StudioManagement
@@ -13,24 +14,61 @@ namespace StudioManagement
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
             string firstName = FirstNameTextBox.Text;
-            DateTime? dob = DOBPicker.SelectedDate;
+            string email = EmailTextBox.Text;
 
-            if (string.IsNullOrEmpty(firstName))
+            if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(email))
             {
-                MessageBox.Show("Please enter your first name.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                if (VerifyUser(email, firstName) != null)
+                {
+                    ProceedWindow prcd = new ProceedWindow();
+                    prcd.Show();
+                    this.Close(); // Close the forgot password window
+                }
+                else
+                {
+                    MessageBox.Show("Invalid email or first name.");
+                }
             }
-
-            if (dob == null)
+            else
             {
-                MessageBox.Show("Please select your date of birth.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                MessageBox.Show("Please enter both your first name and email.");
             }
+        }
 
-            // Perform password reset logic here
-            // ...
+        private int? VerifyUser(string email, string name)
+        {
+            // Query to check the credentials
+            string query = "SELECT top 1 CustomerID FROM CUSTOMER WHERE EmailID = @EmailId AND CustomerName = @name;";
 
-            MessageBox.Show("Password reset instructions have been sent to your email.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@EmailId", email);
+                command.Parameters.AddWithValue("@name", name);
+                int? CustID = null;
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            CustID = reader.GetInt32(0);
+                        }
+                    }
+                    if (CustID.HasValue)
+                    {
+                        Properties.Settings.Default.UserID = CustID.Value;
+                        Properties.Settings.Default.Save();
+                    }
+                    return CustID;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while connecting to the database: " + ex.Message);
+                    return null;
+                }
+            }
         }
     }
 }

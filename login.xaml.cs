@@ -81,8 +81,11 @@ namespace StudioManagement
                             CustID = reader.GetInt32(0);   
                         }
                     }
-                    Properties.Settings.Default.UserID = (int)CustID;
-                    Properties.Settings.Default.Save();
+                    if (CustID.HasValue)
+                    {
+                        Properties.Settings.Default.UserID = CustID.Value;
+                        Properties.Settings.Default.Save();
+                    }
                     return CustID;
                 }
                 catch (Exception ex)
@@ -99,6 +102,12 @@ namespace StudioManagement
             SignupService signup=new SignupService();
             signup.Show();
                 
+        }
+        private void ForgotPasswordTextBlock_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            ForgotPasswordWindow forgotPasswordWindow = new ForgotPasswordWindow();
+            forgotPasswordWindow.Show();
+            this.Close(); // Close the login window
         }
     }
 }
