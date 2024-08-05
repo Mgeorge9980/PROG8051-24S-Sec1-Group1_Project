@@ -53,5 +53,5 @@ Press F5 or click on the "Start" button to run the application.
 
 
 ## Troubleshooting
-** 1. NuGet Package Issues:** Ensure all required NuGet packages are installed. You can manually install missing packages via the NuGet Package Manager.  
-** 2. Database Connection Issues:** Verify the connection string and ensure that SQL Server is running.
+**1. NuGet Package Issues:** Ensure all required NuGet packages are installed. You can manually install missing packages via the NuGet Package Manager.  
+**2. Database Connection Issues:** Verify the connection string and ensure that SQL Server is running.
