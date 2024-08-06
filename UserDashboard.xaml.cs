@@ -33,7 +33,7 @@ namespace StudioManagement
                             bookingAppointmentWindow.Show();
                             break;
                         case "Orders":
-                            var placeOrderWindow = new PlaceOrderWindow();
+                            var placeOrderWindow = new AddOrderWindow();
                             placeOrderWindow.Show();
                             break;
                         case "Services":

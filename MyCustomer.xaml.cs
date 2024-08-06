@@ -53,9 +53,9 @@ namespace StudioManagement
                     {
                         Customer product = new Customer
                         {
-                            Name = reader.GetString(0),
-                            PhoneNumber = reader.GetString(1),
-                            
+                            CustomerName = reader.GetString(0),
+                            MobileNumber = reader.GetString(1),
+
                         };
                         Customers.Add(product);
                     }
@@ -68,7 +68,10 @@ namespace StudioManagement
 
     public class Customer
     {
-        public string Name { get; set; }
-        public string PhoneNumber { get; set; }
+        public int CustomerID { get; set; }
+        public string CustomerName { get; set; }
+        public string MobileNumber { get; set; }
+        public string EmailID { get; set; }
+        public DateTime? DOB { get; set; }
     }
 }

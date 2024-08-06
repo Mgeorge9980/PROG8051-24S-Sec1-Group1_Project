@@ -177,3 +177,7 @@ C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-wi
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\PlaceOrder.g.cs
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ViewServicesUser.g.cs
 C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\bin\Debug\net8.0-windows\StudioManagement.dll.config
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\AddOrderCategory.baml
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ListOrderCategory.baml
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\AddOrderCategory.g.cs
+C:\Users\shilp\Source\Repos\PROG8051-24S-Sec1-Group1_Project\obj\Debug\net8.0-windows\ListOrderCategory.g.cs

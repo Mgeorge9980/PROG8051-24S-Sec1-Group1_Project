@@ -10,7 +10,7 @@
             <DataGrid x:Name="ServicesDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" 
                       CanUserDeleteRows="False" Margin="10" Background="White" Foreground="Black" SelectionChanged="ServicesDataGrid_SelectionChanged">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Number" Binding="{Binding Number}" Width="*" />
+                    <DataGridTextColumn Header="Service ID" Binding="{Binding Number}" Width="*" />
                     <DataGridTextColumn Header="Service" Binding="{Binding ServiceName}" Width="*" />
                 </DataGrid.Columns>
             </DataGrid>

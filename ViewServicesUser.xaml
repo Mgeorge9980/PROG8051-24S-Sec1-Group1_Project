@@ -4,12 +4,11 @@
         Title="Services" Height="450" Width="800">
     <Grid Background="#2F465B">
         <StackPanel>
-            <TextBlock Text="Services" FontSize="28" FontWeight="Bold" Foreground="White" Margin="20"/>
+            <TextBlock Text="Services Provided By Our Studio!!! " FontSize="28" FontWeight="Bold" Foreground="White" Margin="20"/>
             <DataGrid x:Name="ServicesDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" 
-                      CanUserDeleteRows="False" Margin="10" Background="White" Foreground="Black">
+                      CanUserDeleteRows="False" Margin="10" Background="White" Foreground="Black" SelectionChanged="ServicesDataGrid_SelectionChanged">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Number" Binding="{Binding Number}" Width="*" />
-                    <DataGridTextColumn Header="Service" Binding="{Binding ServiceName}" Width="*" />
+                    <DataGridTextColumn Header="Service" Binding="{Binding ServiceName}" Width="200" />
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

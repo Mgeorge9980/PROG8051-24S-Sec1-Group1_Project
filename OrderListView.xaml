@@ -1,36 +1,32 @@
-﻿<Window x:Class="StudioManagement.OrderWindow"
+﻿<Window x:Class="StudioManagement.ListOrdersWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Order List" Height="450" Width="800">
+        Title="List Orders" Height="500" Width="800">
     <Grid Background="#2F465B">
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"
-                   FontSize="36" FontWeight="Bold" Foreground="White" Text="Order List"/>
+                   FontSize="36" FontWeight="Bold" Foreground="White" Text="ORDER LIST"/>
 
-        <StackPanel VerticalAlignment="Top" Margin="20,80,20,20">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*" />
-                    <ColumnDefinition Width="2*" />
-                    <ColumnDefinition Width="2*" />
-                    <ColumnDefinition Width="2*" />
-                </Grid.ColumnDefinitions>
+        <DataGrid x:Name="OrdersDataGrid" AutoGenerateColumns="False" 
+                  Margin="20,80,20,50" VerticalAlignment="Top" Height="300" 
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Order ID" Binding="{Binding OrderID}" Width="*"/>
+                <DataGridTextColumn Header="Customer Name" Binding="{Binding CustomerName}" Width="*"/>
+                <DataGridTextColumn Header="Category" Binding="{Binding CategoryName}" Width="*"/>
+                <DataGridTextColumn Header="Rate" Binding="{Binding Rate}" Width="*"/>
+                <DataGridTextColumn Header="Order Date" Binding="{Binding OrderDate}" Width="*"/>
+                <DataGridTemplateColumn Header="Actions" Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" Name="deleteOrderBtn" Background="#FF6347" Foreground="White" 
+                                    Click="DeleteOrderButton_Click" Tag="{Binding OrderID}" 
+                                    Margin="5,0,5,0"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
-                <TextBlock Text="Date" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="0"/>
-                <TextBlock Text="Customer Name" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="1"/>
-                <TextBlock Text="Order Type" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="2"/>
-                <TextBlock Text="Status" FontSize="16" FontWeight="Bold" Foreground="White" Grid.Column="3"/>
-            </Grid>
-
-            <ListView Name="OrderListView" Margin="0,10,0,0">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" Width="150"/>
-                        <GridViewColumn Header="Customer Name" DisplayMemberBinding="{Binding CustomerName}" Width="200"/>
-                        <GridViewColumn Header="Order Type" DisplayMemberBinding="{Binding OrderType}" Width="150"/>
-                        <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}" Width="150"/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-        </StackPanel>
+        
     </Grid>
 </Window>

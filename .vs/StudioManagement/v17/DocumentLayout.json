@@ -3,15 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shilp\\AppData\\Local\\Temp\\.vsdbgsrc\\70c98aea9e4bddc0449585d9c761d1bd9a699955f682113d2f097beab719c27e\\ViewServicesUser.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\addordercategory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:addordercategory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\addordercategory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:addordercategory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|c:\\users\\shilp\\source\\repos\\prog8051-24s-sec1-group1_project\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E93C075A-0690-49F2-AFF5-E5E9BD01A38D}|StudioManagement.csproj|solutionrelative:signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,39 +39,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ViewServicesUser.xaml",
-              "DocumentMoniker": "C:\\Users\\shilp\\AppData\\Local\\Temp\\.vsdbgsrc\\70c98aea9e4bddc0449585d9c761d1bd9a699955f682113d2f097beab719c27e\\ViewServicesUser.xaml",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\70c98aea9e4bddc0449585d9c761d1bd9a699955f682113d2f097beab719c27e\\ViewServicesUser.xaml",
-              "ToolTip": "C:\\Users\\shilp\\AppData\\Local\\Temp\\.vsdbgsrc\\70c98aea9e4bddc0449585d9c761d1bd9a699955f682113d2f097beab719c27e\\ViewServicesUser.xaml",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\70c98aea9e4bddc0449585d9c761d1bd9a699955f682113d2f097beab719c27e\\ViewServicesUser.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-05T21:38:11.029Z",
+              "Title": "AddOrderCategory.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\AddOrderCategory.xaml.cs",
+              "RelativeDocumentMoniker": "AddOrderCategory.xaml.cs",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\AddOrderCategory.xaml.cs",
+              "RelativeToolTip": "AddOrderCategory.xaml.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBEAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T01:51:45.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Signup.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml.cs",
-              "RelativeDocumentMoniker": "Signup.xaml.cs",
-              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml.cs",
-              "RelativeToolTip": "Signup.xaml.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T21:24:37.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Signup.xaml",
               "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml",
               "RelativeDocumentMoniker": "Signup.xaml",
               "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\Signup.xaml",
               "RelativeToolTip": "Signup.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-05T21:24:09.1Z",
+              "WhenOpened": "2024-08-06T01:49:08.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddOrderCategory.xaml",
+              "DocumentMoniker": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\AddOrderCategory.xaml",
+              "RelativeDocumentMoniker": "AddOrderCategory.xaml",
+              "ToolTip": "C:\\Users\\shilp\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\AddOrderCategory.xaml",
+              "RelativeToolTip": "AddOrderCategory.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-06T01:47:07.964Z",
               "EditorCaption": ""
             }
           ]

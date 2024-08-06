@@ -14,9 +14,7 @@
         <ComboBox x:Name="staffNameComboBox" HorizontalAlignment="Left" VerticalAlignment="Top"
                    Width="150" Margin="180,100,0,0" FontFamily="Arial" 
                    Foreground="Black" Height="30">
-            <ComboBoxItem Content="Staff Name 1"/>
-            <ComboBoxItem Content="Staff Name 2"/>
-            <ComboBoxItem Content="Staff Name 3"/>
+          
         </ComboBox>
 
         <!-- Day Selection -->
@@ -41,11 +39,20 @@
                 Click="SetButton_Click"/>
 
         <!-- Schedule DataGrid -->
-        <DataGrid x:Name="scheduleDataGrid" AutoGenerateColumns="False" 
+        <DataGrid x:Name="scheduleDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" 
                   Margin="400,100,20,0" VerticalAlignment="Top" Height="200">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Day" Binding="{Binding Day}" Width="*"/>
-                <DataGridTextColumn Header="Staff" Binding="{Binding Staff}" Width="*"/>
+                <DataGridTextColumn Header="Day" Binding="{Binding ScheduledDay}" Width="*"/>
+                <DataGridTextColumn Header="Staff" Binding="{Binding StaffName}" Width="*"/>
+                <DataGridTemplateColumn Header="Actions" Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" Name="deleteSchedBtn" Background="#FF6347" Foreground="White" 
+                     Click="deleteSchedBtn_Click" Tag="{Binding ScheduleID}" 
+                     Margin="5,0,5,0"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 

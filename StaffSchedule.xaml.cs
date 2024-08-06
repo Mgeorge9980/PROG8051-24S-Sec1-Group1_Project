@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -6,28 +9,83 @@ namespace StudioManagement
 {
     public partial class StaffScheduleWindow : Window
     {
-        // A list to hold the schedule
-        private List<ScheduleItem> schedule;
-
         public StaffScheduleWindow()
         {
             InitializeComponent();
-            InitializeSchedule();
+            LoadScheduleData();
+            LoadStaffNames();
         }
+        private void LoadStaffNames()
+        {
 
-        private void InitializeSchedule()
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT StaffID, StaffName FROM STAFF_DETAILS"; // Adjust your query as needed
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            List<StaffDetails> staffList = new List<StaffDetails>();
+                            while (reader.Read())
+                            {
+                                StaffDetails staff = new StaffDetails
+                                {
+                                    StaffID = reader.GetInt32(0),
+                                    StaffName = reader.GetString(1)
+                                };
+                                staffList.Add(staff);
+                            }
+
+                            staffNameComboBox.ItemsSource = staffList;
+                            staffNameComboBox.DisplayMemberPath = "StaffName";
+                            staffNameComboBox.SelectedValuePath = "StaffID";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading staff names: " + ex.Message);
+            }
+        }
+        private void LoadScheduleData()
         {
             // Initialize the schedule with days of the week
-            schedule = new List<ScheduleItem>
+            try
             {
-                new ScheduleItem { Day = "Monday", Staff = "Not Assigned" },
-                new ScheduleItem { Day = "Tuesday", Staff = "Not Assigned" },
-                new ScheduleItem { Day = "Wednesday", Staff = "Not Assigned" },
-                new ScheduleItem { Day = "Thursday", Staff = "Not Assigned" },
-                new ScheduleItem { Day = "Friday", Staff = "Not Assigned" }
-            };
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT s.ScheduleID, s.ScheduledDay, st.StaffName FROM Staff_Schedule s JOIN Staff_Details st ON s.StaffID = st.StaffID"; // Adjust your query as needed
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            List<ScheduleItem> scheduleList = new List<ScheduleItem>();
+                            while (reader.Read())
+                            {
+                                ScheduleItem schedule = new ScheduleItem
+                                {
+                                    ScheduleID = reader.GetInt32(0),
+                                    ScheduledDay = reader.GetString(1),
+                                    StaffName = reader.GetString(2)
+                                };
+                                scheduleList.Add(schedule);
+                            }
 
-            scheduleDataGrid.ItemsSource = schedule; // Bind the DataGrid to the schedule list
+                            scheduleDataGrid.ItemsSource = scheduleList;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading schedules: " + ex.Message);
+            }
         }
 
         private void MinimizeWindow_Click(object sender, RoutedEventArgs e)
@@ -55,38 +113,95 @@ namespace StudioManagement
         private void SetButton_Click(object sender, RoutedEventArgs e)
         {
             // Get selected staff name
-            var selectedStaff = staffNameComboBox.SelectedItem as ComboBoxItem;
-
-            if (selectedStaff != null)
+            if (staffNameComboBox.SelectedValue == null)
             {
-                string staffName = selectedStaff.Content.ToString();
+                MessageBox.Show("Please select a staff member.");
+                return;
+            }
 
-                // Update the schedule for the selected day
-                foreach (var item in schedule)
+            if (dayComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a day.");
+                return;
+            }
+
+            int staffID = (int)staffNameComboBox.SelectedValue;
+            string scheduledDay = (dayComboBox.SelectedItem as ComboBoxItem).Content.ToString();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
                 {
-                    if (item.Staff == "Not Assigned") // Check for the first unassigned day
+                    connection.Open();
+
+                    string insertQuery = "INSERT INTO Staff_Schedule (StaffID, ScheduledDay) VALUES (@StaffID, @ScheduledDay)";
+                    using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
                     {
-                        item.Staff = staffName; // Assign the selected staff
-                        break; // Exit after assigning
+                        insertCommand.Parameters.AddWithValue("@StaffID", staffID);
+                        insertCommand.Parameters.AddWithValue("@ScheduledDay", scheduledDay);
+
+                        int rowsAffected = insertCommand.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Schedule added successfully.");
+                            LoadScheduleData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to add schedule.");
+                        }
                     }
                 }
-
-                scheduleDataGrid.Items.Refresh(); // Refresh the DataGrid to show the updated schedule
-
-                // Display confirmation message
-                MessageBox.Show($"Schedule set for {staffName}.", "Schedule Set", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select a staff member.", "Error", MessageBoxButton.OK);
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+        private void deleteSchedBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            int scheduleID = (int)button.Tag;
+
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
+                {
+                    connection.Open();
+
+                    string deleteQuery = "DELETE FROM Staff_Schedule WHERE ScheduleID = @ScheduleID";
+                    using (SqlCommand deleteCommand = new SqlCommand(deleteQuery, connection))
+                    {
+                        deleteCommand.Parameters.AddWithValue("@ScheduleID", scheduleID);
+
+                        int rowsAffected = deleteCommand.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Schedule deleted successfully.");
+                            LoadScheduleData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to delete schedule.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
 
         // Class to represent a schedule item
         public class ScheduleItem
         {
-            public string? Day { get; set; }
-            public string? Staff { get; set; }
+            public int? ScheduleID {get;set;}
+            public string? ScheduledDay { get; set; }
+            public string? StaffName { get; set; }
         }
+
+        
     }
 }

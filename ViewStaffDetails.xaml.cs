@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -7,7 +9,6 @@ namespace StudioManagement
 {
     public partial class ViewStaffDetailsWindow : Window
     {
-        public List<Staff> StaffList { get; set; }
 
         public ViewStaffDetailsWindow()
         {
@@ -17,15 +18,42 @@ namespace StudioManagement
 
         private void LoadStaffDetails()
         {
-            StaffList = new List<Staff>
-            {
-                new Staff { Name = "John Doe", PhoneNumber = "123-456-7890" },
-                new Staff { Name = "Jane Smith", PhoneNumber = "098-765-4321" }
-                // Add more staff details here
-            };
+            List<StaffDetails> staffList = new List<StaffDetails>();
 
-            StaffDataGrid.ItemsSource = StaffList;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT StaffID, StaffName, StaffEmailID, StaffMobileNumber FROM STAFF_DETAILS";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                StaffDetails staff = new StaffDetails
+                                {
+                                    StaffID = reader.GetInt32(0),
+                                    StaffName = reader.GetString(1),
+                                    StaffEmailID = reader.GetString(2),
+                                    StaffMobileNumber = reader.GetString(3)
+                                };
+                                staffList.Add(staff);
+                            }
+                        }
+                    }
+                }
+
+                StaffDataGrid.ItemsSource = staffList;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
+
 
         private void AddNewStaffButton_Click(object sender, RoutedEventArgs e)
         {
@@ -33,28 +61,79 @@ namespace StudioManagement
             //MessageBox.Show("Add New Staff button clicked");
             AddStaffWindow addStaffWindow = new AddStaffWindow();
             addStaffWindow.Show();
+            this.Close();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            var button = sender as Button;
-            if (button != null)
+            if (sender is Button button && button.Tag is int staffID)
             {
-                var staffName = button.Tag as string;
-                var staffToDelete = StaffList.FirstOrDefault(s => s.Name == staffName);
-                if (staffToDelete != null)
+
+
+                try
                 {
-                    StaffList.Remove(staffToDelete);
-                    StaffDataGrid.ItemsSource = null; // Reset the ItemsSource to refresh the DataGrid
-                    StaffDataGrid.ItemsSource = StaffList;
+                    using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
+                    {
+                        connection.Open();
+
+                        // Start a transaction
+                        using (SqlTransaction transaction = connection.BeginTransaction())
+                        {
+                            try
+                            {
+                                // Delete from Staff_Schedule table
+                                string deleteScheduleQuery = "DELETE FROM Staff_Schedule WHERE StaffID = @StaffID";
+                                using (SqlCommand deleteScheduleCommand = new SqlCommand(deleteScheduleQuery, connection, transaction))
+                                {
+                                    deleteScheduleCommand.Parameters.AddWithValue("@StaffID", staffID);
+                                    deleteScheduleCommand.ExecuteNonQuery();
+                                }
+
+                                // Delete from Staff table
+                                string deleteStaffQuery = "DELETE FROM STAFF_DETAILS WHERE StaffID = @StaffID";
+                                using (SqlCommand deleteStaffCommand = new SqlCommand(deleteStaffQuery, connection, transaction))
+                                {
+                                    deleteStaffCommand.Parameters.AddWithValue("@StaffID", staffID);
+                                    deleteStaffCommand.ExecuteNonQuery();
+                                }
+
+                                // Commit the transaction
+                                transaction.Commit();
+                                MessageBox.Show("Staff and their schedule deleted successfully.");
+                                LoadStaffDetails();
+                            }
+                            catch (Exception ex)
+                            {
+                                // Rollback the transaction if there was an error
+                                transaction.Rollback();
+                                MessageBox.Show("An error occurred while deleting the staff and their schedule: " + ex.Message);
+                            }
+                        }
+                    }
+
+                  
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid staff ID.");
             }
         }
     }
-
-    public class Staff
+    public class StaffDetails
     {
-        public string Name { get; set; }
-        public string PhoneNumber { get; set; }
+        public int StaffID { get; set; }
+        public string StaffName { get; set; }
+        public string StaffEmailID { get; set; }
+        public string StaffMobileNumber { get; set; }
     }
 }
+
+
+
+
+

@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AddOrderCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="AddServiceAdmin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -32,6 +35,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="forgotpassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ListOrderCategory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="login.xaml.cs">
@@ -78,6 +84,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AddOrderCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="AddServiceAdmin.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -103,6 +112,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="forgotpassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ListOrderCategory.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="login.xaml">

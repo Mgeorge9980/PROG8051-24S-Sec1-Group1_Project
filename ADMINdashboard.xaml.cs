@@ -30,8 +30,12 @@ namespace StudioManagement
                             ViewAppointmentWindow.Show();
                             break;
                         case "Orders":
-                            var OrderWindow = new OrderWindow();
-                            OrderWindow.Show();
+                            var OrderWind = new ListOrdersWindow();
+                            OrderWind.Show();
+                            break;
+                        case "Order Category":
+                            var ListCategories = new ListCategoriesWindow();
+                            ListCategories.Show();
                             break;
                         case "Services":
                             var ServiceAdminWindow = new ServiceAdminWindow();

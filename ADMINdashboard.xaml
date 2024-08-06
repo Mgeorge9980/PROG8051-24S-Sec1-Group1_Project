@@ -14,6 +14,7 @@
                 <ListBoxItem Content="My Customers" />
                 <ListBoxItem Content="Appointments" />
                 <ListBoxItem Content="Orders" />
+                <ListBoxItem Content="Order Category" />
                 <ListBoxItem Content="Services" />
                 <ListBoxItem Content="Staff Schedule" />
                 <ListBoxItem Content="Staff Details" />

@@ -52,7 +52,7 @@ namespace StudioManagement {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/StudioManagement;component/contactus.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/StudioManagement;V1.0.0.0;component/contactus.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ContactUs.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
