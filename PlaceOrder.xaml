@@ -1,51 +1,65 @@
 ﻿<Window x:Class="StudioManagement.AddOrderWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Add Order" Height="400" Width="500">
+        Title="Add Order" Height="500" Width="600">
+
     <Grid Background="#2F465B">
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"
                    FontSize="36" FontWeight="Bold" Foreground="White" Text="PLACE ORDER"/>
 
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
-
-            <!-- Customer Selection -->
-            <Grid Margin="0,10">
-                <ComboBox Name="CustomerNameComboBox" Height="50"
-                          FontSize="16" Background="White" Foreground="Black"
-                          IsEditable="False"/>
-                <TextBlock Text="Customer Name" VerticalAlignment="Center"
-                           Foreground="Gray" Margin="15,0,0,0"
-                           IsHitTestVisible="False" FontSize="16"/>
-            </Grid>
-
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
             <!-- Category -->
             <Grid Margin="0,10">
-                <ComboBox Name="CategoryComboBox" Height="50"
-                          FontSize="16" Background="White" Foreground="Black"
-                          IsEditable="False"/>
-                <TextBlock Text="Category" VerticalAlignment="Center"
-                           Foreground="Gray" Margin="15,0,0,0"
-                           IsHitTestVisible="False" FontSize="16"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Category" VerticalAlignment="Center" Foreground="Gray" 
+                           Margin="0,0,10,0" IsHitTestVisible="False" FontSize="16"/>
+                <ComboBox Name="CategoryComboBox" Height="50" Grid.Column="1"
+                          FontSize="16" Background="White" Foreground="Black" IsEditable="False"
+                          SelectionChanged="CategoryComboBox_SelectionChanged"/>
             </Grid>
 
             <!-- Rate -->
             <Grid Margin="0,10">
-                <TextBox Name="RateTextBox" Height="50"
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Rate" VerticalAlignment="Center" Foreground="Gray" 
+                           Margin="0,0,10,0" IsHitTestVisible="False" FontSize="16"/>
+                <TextBox Name="RateTextBox" Height="50" Grid.Column="1"
                          FontSize="16" Padding="10" Background="White"
-                         Foreground="Black" BorderBrush="Transparent"
-                         BorderThickness="0" VerticalContentAlignment="Center"/>
-                <TextBlock Text="Rate" VerticalAlignment="Center"
-                           Foreground="Gray" Margin="15,0,0,0"
-                           IsHitTestVisible="False" FontSize="16"/>
+                         Foreground="Black" BorderBrush="Transparent" BorderThickness="0" 
+                         VerticalContentAlignment="Center" IsEnabled="False"/>
+                <!-- Disabled Rate TextBox -->
+            </Grid>
+
+            <!-- Quantity -->
+            <Grid Margin="0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Quantity" VerticalAlignment="Center" Foreground="Gray" 
+                           Margin="0,0,10,0" IsHitTestVisible="False" FontSize="16"/>
+                <TextBox Name="QuantityTextBox" Height="50" Grid.Column="1"
+                         FontSize="16" Padding="10" Background="White"
+                         Foreground="Black" BorderBrush="Transparent" BorderThickness="0" 
+                         VerticalContentAlignment="Center"/>
             </Grid>
 
             <!-- Order Date -->
             <Grid Margin="0,10">
-                <DatePicker Name="OrderDatePicker" Height="50"
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Order Date" VerticalAlignment="Center" Foreground="Gray" 
+                           Margin="0,0,10,0" IsHitTestVisible="False" FontSize="16"/>
+                <DatePicker Name="OrderDatePicker" Height="50" Grid.Column="1"
                              FontSize="16" Background="White" Foreground="Gray"/>
-                <TextBlock Text="" VerticalAlignment="Center"
-                           Foreground="Gray" Margin="15,0,0,0"
-                           IsHitTestVisible="False" FontSize="16"/>
             </Grid>
 
             <!-- Save Order Button -->

@@ -6,23 +6,8 @@
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"  
                    FontSize="36" FontWeight="Bold" Foreground="White" Text="View Appointments"/>
 
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,70,0,0">
-            <TextBlock Text="Filter by date" Foreground="White" FontSize="16" Margin="0,0,0,10" HorizontalAlignment="Center"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock Text="From:" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
-                <DatePicker Name="FromDatePicker" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="0,0,10,0"/>
-                <TextBlock Text="To:" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
-                <DatePicker Name="ToDatePicker" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="0,0,10,0"/>
-            </StackPanel>
 
-            <TextBlock Text="Search a customer" Foreground="White" FontSize="16" Margin="20,20,0,10" HorizontalAlignment="Center"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBox Name="SearchCustomerTextBox" Width="200" Margin="0,0,10,0"/>
-                <Button Content="Search" Click="SearchCustomerButton_Click" Width="100"/>
-            </StackPanel>
-        </StackPanel>
-
-        <DataGrid Name="AppointmentsDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="20,200,20,20">
+        <DataGrid Name="AppointmentsDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="20,100,20,20">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Number" Binding="{Binding Number}" Width="*" />
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" />

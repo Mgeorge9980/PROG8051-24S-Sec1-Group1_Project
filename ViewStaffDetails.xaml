@@ -18,7 +18,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding StaffName}" Width="*" />
                 <DataGridTextColumn Header="Phone Number" Binding="{Binding StaffMobileNumber}" Width="*" />
-                <DataGridTextColumn Header="Phone Number" Binding="{Binding StaffEmailID}" Width="*" />
+                <DataGridTextColumn Header="Email" Binding="{Binding StaffEmailID}" Width="*" />
                 <DataGridTemplateColumn Header="Actions" Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

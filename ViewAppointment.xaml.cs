@@ -58,56 +58,10 @@ namespace StudioManagement
             Appointments = appmnts;
 
         }
-
-        private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
-        {
-            FilterAppointments();
-        }
-
-        private void SearchCustomerButton_Click(object sender, RoutedEventArgs e)
-        {
-            FilterAppointments();
-        }
-
-        private void FilterAppointments()
-        {
-            DateTime? fromDate = FromDatePicker.SelectedDate;
-            DateTime? toDate = ToDatePicker.SelectedDate;
-            string customerName = SearchCustomerTextBox.Text.ToLower();
-
-            var filtered = Appointments.Where(a =>
-            {
-                bool dateMatch = true;
-                bool nameMatch = true;
-
-                if (fromDate.HasValue && toDate.HasValue)
-                {
-                    DateTime? appointmentDate = a.Date;
-                    dateMatch = appointmentDate >= fromDate.Value && appointmentDate <= toDate.Value;
-                }
-
-                if (!string.IsNullOrWhiteSpace(customerName))
-                {
-                    nameMatch = a.Name.ToLower().Contains(customerName);
-                }
-
-                return dateMatch && nameMatch;
-            }).ToList();
-
-            FilteredAppointments.Clear();
-            foreach (var appointment in filtered)
-            {
-                FilteredAppointments.Add(appointment);
-            }
-
-            AppointmentsDataGrid.ItemsSource = FilteredAppointments;
-        }
-
         private void ActionCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
-
         public class Appointment
         {
             public int Number { get; set; }
@@ -119,5 +73,7 @@ namespace StudioManagement
             public string? Action { get; set; }
             public string? AppointmentStatus { get; set; }
         }
+
+        
     }
 }

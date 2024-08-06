@@ -43,15 +43,12 @@ namespace StudioManagement
                 }
             }
 
-            // Bind the list to the ComboBox
-            CustomerNameComboBox.ItemsSource = customers;
-            CustomerNameComboBox.DisplayMemberPath = "CustomerName"; // Shows the name in the ComboBox
-            CustomerNameComboBox.SelectedValuePath = "CustomerID"; // The value to be used for the selected item
+          
         }
 
         private void LoadCategories()
         {
-            string query = "SELECT OrderCategoryID, CategoryName FROM OrderCategory";
+            string query = "SELECT OrderCategoryID, CategoryName, Rate FROM ORDER_CATEGORY"; // Include Rate in the SELECT
             List<OrderCategory> categories = new List<OrderCategory>();
 
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
@@ -66,7 +63,8 @@ namespace StudioManagement
                         OrderCategory category = new OrderCategory
                         {
                             OrderCategoryID = reader.GetInt32(0),
-                            CategoryName = reader.GetString(1)
+                            CategoryName = reader.GetString(1),
+                            Rate = reader.GetDecimal(2) // Retrieve Rate
                         };
                         categories.Add(category);
                     }
@@ -82,36 +80,48 @@ namespace StudioManagement
             CategoryComboBox.DisplayMemberPath = "CategoryName"; // Shows the name in the ComboBox
             CategoryComboBox.SelectedValuePath = "OrderCategoryID"; // The value to be used for the selected item
         }
+        private void CategoryComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            // Get the selected category
+            var selectedCategory = CategoryComboBox.SelectedItem as OrderCategory;
+
+            // Check if a category is selected
+            if (selectedCategory != null)
+            {
+                // Fill the RateTextBox based on the selected category's rate
+                RateTextBox.Text = selectedCategory.Rate.ToString("0.00"); // Format to 2 decimal places
+            }
+        }
+
 
         private void SaveOrderButton_Click(object sender, RoutedEventArgs e)
         {
-            var selectedCustomer = CustomerNameComboBox.SelectedItem as Customer;
+            
             var selectedCategory = CategoryComboBox.SelectedItem as OrderCategory;
-            string rateText = RateTextBox.Text; // Assuming rate is entered as a text
+            string qtyText = QuantityTextBox.Text; // Assuming rate is entered as a text
 
-            if (selectedCustomer != null && selectedCategory != null &&
-                !string.IsNullOrEmpty(rateText) && DateTime.TryParse(OrderDatePicker.Text, out DateTime orderDate))
+            if ( selectedCategory != null &&
+                !string.IsNullOrEmpty(qtyText) && DateTime.TryParse(OrderDatePicker.Text, out DateTime orderDate))
             {
-                int customerId = selectedCustomer.CustomerID;
                 int categoryId = selectedCategory.OrderCategoryID;
                 decimal rate;
 
                 // Validate rate
-                if (!decimal.TryParse(rateText, out rate) || rate < 0)
+                if (!decimal.TryParse(qtyText, out rate) || rate < 0)
                 {
                     MessageBox.Show("Please enter a valid rate.");
                     return;
                 }
 
                 // Insert order into the database
-                string insertQuery = "INSERT INTO Orders (CustomerID, OrderCategoryID, Rate, OrderDate) VALUES (@CustomerID, @OrderCategoryID, @Rate, @OrderDate)";
+                string insertQuery = "INSERT INTO CUSTOMER_ORDER (CustomerID, OrderCategoryID, OrderCount, OrderDate) VALUES (@CustomerID, @OrderCategoryID, @OrderCount, @OrderDate)";
 
                 using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
                 {
                     SqlCommand command = new SqlCommand(insertQuery, connection);
-                    command.Parameters.AddWithValue("@CustomerID", customerId);
+                    command.Parameters.AddWithValue("@CustomerID", Properties.Settings.Default.UserID);
                     command.Parameters.AddWithValue("@OrderCategoryID", categoryId);
-                    command.Parameters.AddWithValue("@Rate", rate);
+                    command.Parameters.AddWithValue("@OrderCount", qtyText);
                     command.Parameters.AddWithValue("@OrderDate", orderDate);
 
                     try

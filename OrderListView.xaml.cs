@@ -18,7 +18,7 @@ namespace StudioManagement
         {
             List<Order> orders = new List<Order>();
 
-            string query = "SELECT OrderID, CustomerName, CategoryName, Rate, OrderDate FROM Orders";
+            string query = "select co.OrderID,cu.CustomerName,orc.CategoryName,orc.Rate,co.OrderDate from CUSTOMER_ORDER co inner join CUSTOMER cu on co.CustomerID=cu.CustomerID inner join ORDER_CATEGORY orc on co.OrderCategoryID=orc.OrderCategoryID";
 
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
             {
