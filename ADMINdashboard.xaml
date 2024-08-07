@@ -10,15 +10,16 @@
         <StackPanel Grid.Column="0" Background="#374A5E">
             <TextBlock Text="Lens Studio" FontSize="28" FontWeight="Bold" Foreground="White" Margin="20"/>
             <ListBox Background="#374A5E" Foreground="White" BorderThickness="0" SelectionChanged="ListBox_SelectionChanged">
-                <ListBoxItem Content="Home" />
-                <ListBoxItem Content="My Customers" />
-                <ListBoxItem Content="Appointments" />
-                <ListBoxItem Content="Orders" />
-                <ListBoxItem Content="Order Category" />
-                <ListBoxItem Content="Services" />
-                <ListBoxItem Content="Staff Schedule" />
-                <ListBoxItem Content="Staff Details" />
-                <ListBoxItem Content="Logout" />
+                <ListBoxItem Content="Home" FontSize="18" Padding="5" />
+                <ListBoxItem Content="My Customers" FontSize="18" Padding="5"/>
+                <ListBoxItem Content="Appointments" FontSize="18" Padding="5"/>
+                <ListBoxItem Content="Orders" FontSize="18" Padding="5"/>
+                <ListBoxItem Content="Order Category" FontSize="18" Padding="5"/>
+                <ListBoxItem Content="Services" FontSize="18" Padding="5"/>
+                <ListBoxItem Content="Staff Schedule" FontSize="18" Padding="5"/>
+                <ListBoxItem Content="Staff Details" FontSize="18" Padding="5"/>
+                <ListBoxItem Content="Feedbacks" FontSize="18" Padding="5"/>
+                <ListBoxItem Content="Logout" FontSize="18" Padding="5"/>
             </ListBox>
         </StackPanel>
 
@@ -51,12 +52,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
-                <StackPanel Margin="10">
-                    <TextBlock Text="STAFF IN SHIFT" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Robert Thomson" FontSize="14" Foreground="White" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Phone: " FontSize="12" Foreground="White" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Email: " FontSize="12" Foreground="White" HorizontalAlignment="Center"/>
-                </StackPanel>
+                
 
             </StackPanel>
         </StackPanel>

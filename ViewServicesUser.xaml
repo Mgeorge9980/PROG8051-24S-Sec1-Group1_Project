@@ -8,7 +8,9 @@
             <DataGrid x:Name="ServicesDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" 
                       CanUserDeleteRows="False" Margin="10" Background="White" Foreground="Black" SelectionChanged="ServicesDataGrid_SelectionChanged">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Service" Binding="{Binding ServiceName}" Width="200" />
+                    <DataGridTextColumn Header="Service" Binding="{Binding Number}" Width="*" />
+                    <DataGridTextColumn Header="Service" Binding="{Binding ServiceName}" Width="*"/>
+                    <DataGridTextColumn Header="Service" Binding="{Binding ServicePrice}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

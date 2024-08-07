@@ -10,6 +10,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Icons\appointments.png" />
+    <None Remove="Icons\customers.png" />
+    <None Remove="Icons\feedbacks.png" />
+    <None Remove="Icons\home.png" />
+    <None Remove="Icons\Logo.png" />
+    <None Remove="Icons\logout.png" />
+    <None Remove="Icons\orders.png" />
+    <None Remove="Icons\services.png" />
+    <None Remove="Icons\staff details.png" />
+    <None Remove="Icons\staff schedule.png" />
+    <None Remove="Icons\staff.png" />
+    <None Remove="Icons\welcome_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 
@@ -26,6 +41,21 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\appointments.png" />
+    <Resource Include="Icons\customers.png" />
+    <Resource Include="Icons\feedbacks.png" />
+    <Resource Include="Icons\home.png" />
+    <Resource Include="Icons\Logo.png" />
+    <Resource Include="Icons\logout.png" />
+    <Resource Include="Icons\orders.png" />
+    <Resource Include="Icons\services.png" />
+    <Resource Include="Icons\staff details.png" />
+    <Resource Include="Icons\staff schedule.png" />
+    <Resource Include="Icons\staff.png" />
+    <Resource Include="Icons\welcome_icon.png" />
   </ItemGroup>
 
 </Project>

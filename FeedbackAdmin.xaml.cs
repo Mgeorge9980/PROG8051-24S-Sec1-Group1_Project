@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows;
 
 namespace StudioManagement
@@ -8,27 +10,42 @@ namespace StudioManagement
         public ViewRatingsWindow()
         {
             InitializeComponent();
-            LoadRatings();
+            LoadFeedbackData();
         }
 
-        private void LoadRatings()
+        private void LoadFeedbackData()
         {
-            List<CustomerRating> ratings = new List<CustomerRating>
-            {
-                new CustomerRating { CustomerName = "John Doe", Rating = 5, Comment = "Excellent service!" },
-                new CustomerRating { CustomerName = "Jane Smith", Rating = 4, Comment = "Very good experience." },
-                new CustomerRating { CustomerName = "Sam Brown", Rating = 3, Comment = "Average service." }
-                // Add more sample data or load from a data source
-            };
+            List<Feedback> feedbackList = new List<Feedback>();
 
-            RatingsDataGrid.ItemsSource = ratings;
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
+            {
+                connection.Open();
+                string query = "select CustomerName,FeedbackText,FeedbackRating from FEEDBACK fd JOIN CUSTOMER cu on fd.CustomerID=cu.CustomerID"; // Adjust the query if needed
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            feedbackList.Add(new Feedback
+                            {
+                                CustomerName = reader["CustomerName"].ToString(), // Assuming CustomerID is used as CustomerName
+                                FeedbackRating = (int)reader["FeedbackRating"],
+                                FeedbackText = reader["FeedbackText"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+
+            RatingsDataGrid.ItemsSource = feedbackList; // Bind the data to the DataGrid
         }
     }
 
-    public class CustomerRating
+    public class Feedback
     {
         public string CustomerName { get; set; }
-        public int Rating { get; set; }
-        public string Comment { get; set; }
+        public int FeedbackRating { get; set; }
+        public string FeedbackText { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,8 +16,42 @@ namespace StudioManagement
         {
             InitializeComponent();
             LoadDashboardData();
+            LoadStaffInShift();
 
+        }
+        private void LoadStaffInShift()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM STAFF_DETAILS SD JOIN STAFF_SCHEDULE SC on SD.StaffID = SC.StaffID WHERE DATENAME(weekday, GETDATE()) = SC.ScheduledDay";
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        DataRow row = dt.Rows[0];
+                        StaffName.Text = row["StaffName"].ToString();
+                        StaffPhone.Text = "Phone: " + row["Phone"].ToString();
+                        StaffEmail.Text = "Email: " + row["Email"].ToString();
+                    }
+                    else
+                    {
+                        StaffName.Text = "No staff on shift today.";
+                        StaffPhone.Text = string.Empty;
+                        StaffEmail.Text = string.Empty;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
         public class DataAccess
         {
@@ -138,7 +173,7 @@ namespace StudioManagement
                             viewServicesWindow.Show();
                             break;
                         case "Feedbacks":
-                            var addFeedbackWindow = new AddFeedbackWindow();
+                            var addFeedbackWindow = new FeedbackWindow();
                             addFeedbackWindow.Show();
                             break;
                         case "FAQs":
