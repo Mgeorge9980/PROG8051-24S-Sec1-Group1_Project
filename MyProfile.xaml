@@ -17,14 +17,13 @@
             </StackPanel>
 
             <StackPanel Margin="10">
+                
                 <TextBlock Text="Email Address:" FontSize="18" FontWeight="Bold" Foreground="White"/>
                 <TextBlock x:Name="EmailAddressText" FontSize="16" Foreground="White"/>
+                
             </StackPanel>
 
-            <StackPanel Margin="10">
-                <TextBlock Text="Order Details:" FontSize="18" FontWeight="Bold" Foreground="White"/>
-                <TextBlock x:Name="OrderDetailsText" FontSize="16" Foreground="White" TextWrapping="Wrap" Width="500"/>
-            </StackPanel>
+          
         </StackPanel>
     </Grid>
 </Window>

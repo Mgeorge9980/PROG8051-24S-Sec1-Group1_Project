@@ -11,8 +11,18 @@ namespace StudioManagement
 
         private void YesButton_Click(object sender, RoutedEventArgs e)
         {
-            // Handle logout logic here
-            Application.Current.Shutdown(); // Example: Close the application
+            // Close the main window (if applicable)
+            if (Application.Current.MainWindow != null)
+            {
+                Application.Current.MainWindow.Close();
+            }
+
+            // Create and show the LoginWindow
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
+
+            // Close the current LogoutWindow
+            this.Close();
         }
 
         private void NoButton_Click(object sender, RoutedEventArgs e)

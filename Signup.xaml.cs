@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows;
 
 using System.Windows.Controls;
@@ -49,7 +50,7 @@ namespace StudioManagement
             String insertQuery = "INSERT INTO CUSTOMER (CustomerName, MobileNumber, EmailID, DOB, Password, Address) VALUES\r\n(@CustomerName, @MobileNumber, @EmailID ,@DOB, @Password, @Address)";
 
             // Create a new connection object
-            using (SqlConnection connection = new SqlConnection("Server=MERLIN\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
             {
                 try
                 {

@@ -1,39 +1,64 @@
-﻿using System.Windows;
+﻿using System;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace StudioManagement
 {
-    /// <summary>
-    /// Interaction logic for AddFeedbackWindow.xaml
-    /// </summary>
-    public partial class AddFeedbackWindow : Window
+    public partial class FeedbackWindow : Window
     {
-        public AddFeedbackWindow()
+        private string ConnectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+        private int CustomerID = Properties.Settings.Default.UserID;
+
+        public FeedbackWindow()
         {
             InitializeComponent();
         }
 
-        private void PostButton_Click(object sender, RoutedEventArgs e)
+        private void SubmitFeedbackButton_Click(object sender, RoutedEventArgs e)
         {
-            // Get the input values from the controls
-            string rating = (RatingComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-            string comment = CommentTextBox.Text;
+            int feedbackRating;
+            ComboBoxItem selectedRatingItem = FeedbackRatingComboBox.SelectedItem as ComboBoxItem;
 
-            // Validate inputs
-            if (string.IsNullOrWhiteSpace(rating) || string.IsNullOrWhiteSpace(comment))
+            if (selectedRatingItem == null || !int.TryParse(selectedRatingItem.Tag.ToString(), out feedbackRating))
             {
-                MessageBox.Show("Please provide a rating and a comment.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Please select a valid feedback rating.");
                 return;
             }
 
-            // Implement the logic to save the feedback here
-            // For demonstration, we'll just show a message box with the feedback details
-            MessageBox.Show($"Feedback Posted:\n\nRating: {rating}\nComment: {comment}",
-                            "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            string feedbackText = FeedbackTextBox.Text;
 
-            // Optionally, clear the inputs after posting
-            RatingComboBox.SelectedIndex = -1;
-            CommentTextBox.Clear();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO FEEDBACK (CustomerID, FeedbackText, FeedbackRating, ResponseStatus) VALUES (@CustomerID, @FeedbackText, @FeedbackRating, @ResponseStatus)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@CustomerID", CustomerID);
+                    cmd.Parameters.AddWithValue("@FeedbackText", feedbackText);
+                    cmd.Parameters.AddWithValue("@FeedbackRating", feedbackRating);
+                    cmd.Parameters.AddWithValue("@ResponseStatus", "submitted");
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Feedback submitted successfully.");
+                        FeedbackTextBox.Clear();
+                        FeedbackRatingComboBox.SelectedIndex = -1;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("An error occurred while submitting your feedback.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
     }
 }

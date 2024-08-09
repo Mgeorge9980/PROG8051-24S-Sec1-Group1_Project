@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Windows;
 
@@ -18,7 +19,7 @@ namespace StudioManagement
         {
             List<ServiceAdminWindow.Service> ServicesList = new List<ServiceAdminWindow.Service>();
 
-            using (SqlConnection connection = new SqlConnection("Server=SHILPA-PC\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
             {
                 connection.Open();
                 string query = "select ServiceID,ServiceName,ServicePrice from Service";
@@ -30,9 +31,9 @@ namespace StudioManagement
                     {
                         ServiceAdminWindow.Service product = new ServiceAdminWindow.Service
                         {
-                            Number =Convert.ToInt32( reader.GetString(0)),
+                            Number = reader.GetInt32(0),
                             ServiceName = reader.GetString(1),
-                            ServicePrice = reader.GetString(2),
+                            ServicePrice = reader.GetDecimal(2).ToString(),
 
                         };
                         ServicesList.Add(product);
@@ -41,6 +42,11 @@ namespace StudioManagement
             }
 
             return ServicesList;
+        }
+
+        private void ServicesDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

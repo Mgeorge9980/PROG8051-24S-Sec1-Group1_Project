@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows;
@@ -29,10 +30,10 @@ namespace StudioManagement
 
             List<Appointment> appmnts = new List<Appointment>();
 
-            using (SqlConnection connection = new SqlConnection("Server=SHILPA-PC\\SQLEXPRESS19;Database=StudioManagement;User Id=sa;Password=Conestoga1;Trusted_Connection=True;"))
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString))
             {
                 connection.Open();
-                string query = "select ap.AppointmentID,cu.CustomerName,cu.MobileNumber,ap.AppointmentDate,ap.AppointmentTime from APPOINTMENT ap inner join CUSTOMER cu on ap.CustomerID=cu.CustomerID;";
+                string query = "select ap.AppointmentID,cu.CustomerName,cu.MobileNumber,ap.AppointmentDate,se.ServiceName,ap.AppointmentStatus from APPOINTMENT ap inner join CUSTOMER cu on ap.CustomerID=cu.CustomerID inner join SERVICE se on ap.ServiceID=se.ServiceID;";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -45,8 +46,8 @@ namespace StudioManagement
                             Name = reader.GetString(1),
                             PhoneNumber = reader.GetString(2),
                             Date = reader.GetDateTime(3),
-                            Time = reader.GetTimeSpan(4),
-
+                            ServiceType = reader.GetString(4),
+                            AppointmentStatus = reader.GetString(5),
 
                         };
                         appmnts.Add(Appnt);
@@ -57,59 +58,22 @@ namespace StudioManagement
             Appointments = appmnts;
 
         }
-
-        private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        private void ActionCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            FilterAppointments();
+
+        }
+        public class Appointment
+        {
+            public int Number { get; set; }
+            public string? ServiceType { get; set; }
+            public string? Name { get; set; }
+            public string? PhoneNumber { get; set; }
+            public DateTime? Date { get; set; }
+            public TimeSpan? Time { get; set; }
+            public string? Action { get; set; }
+            public string? AppointmentStatus { get; set; }
         }
 
-        private void SearchCustomerButton_Click(object sender, RoutedEventArgs e)
-        {
-            FilterAppointments();
-        }
-
-        private void FilterAppointments()
-        {
-            DateTime? fromDate = FromDatePicker.SelectedDate;
-            DateTime? toDate = ToDatePicker.SelectedDate;
-            string customerName = SearchCustomerTextBox.Text.ToLower();
-
-            var filtered = Appointments.Where(a =>
-            {
-                bool dateMatch = true;
-                bool nameMatch = true;
-
-                if (fromDate.HasValue && toDate.HasValue)
-                {
-                    DateTime? appointmentDate = a.Date;
-                    dateMatch = appointmentDate >= fromDate.Value && appointmentDate <= toDate.Value;
-                }
-
-                if (!string.IsNullOrWhiteSpace(customerName))
-                {
-                    nameMatch = a.Name.ToLower().Contains(customerName);
-                }
-
-                return dateMatch && nameMatch;
-            }).ToList();
-
-            FilteredAppointments.Clear();
-            foreach (var appointment in filtered)
-            {
-                FilteredAppointments.Add(appointment);
-            }
-
-            AppointmentsDataGrid.ItemsSource = FilteredAppointments;
-        }
-    }
-
-    public class Appointment
-    {
-        public int Number { get; set; }
-        public string? Name { get; set; }
-        public string? PhoneNumber { get; set; }
-        public DateTime? Date { get; set; }
-        public TimeSpan? Time { get; set; }
-        public string? Action { get; set; }
+        
     }
 }
