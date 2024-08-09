@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = StudioManagement
-build_property.ProjectDir = C:\Users\merli\source\repos\PROG8051-24S-Sec1-Group1_Project\
+build_property.ProjectDir = C:\Users\merli\Source\Repos\PROG8051-24S-Sec1-Group1_Project\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

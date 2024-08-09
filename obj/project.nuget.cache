@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eFFLcC3UqA0=",
+  "dgSpecHash": "eLw4+49KLmY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\merli\\source\\repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj",
+  "projectFilePath": "C:\\Users\\merli\\Source\\Repos\\PROG8051-24S-Sec1-Group1_Project\\StudioManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\merli\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\merli\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
